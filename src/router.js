@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import App from './App'
-
 Vue.use(Router)
 
 const EMPTY_VIEW = { template: '<router-view />' };
@@ -22,7 +20,6 @@ export default new Router({
                         children: [
                             {
                                 path: 'radio',
-                                name: 'component-radio',
                                 component: () => import('./views/basic/example/radio'),
                             }
                         ]
@@ -32,6 +29,18 @@ export default new Router({
             {
                 path: 'chart',
                 component: EMPTY_VIEW,
+                children: [
+                    {
+                        path: 'example',
+                        component: EMPTY_VIEW,
+                        children: [
+                            {
+                                path: 'line',
+                                component: () => import('./views/charts/example/line'),
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 path: 'template',

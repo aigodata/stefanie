@@ -4,6 +4,8 @@ import App from './App.vue'
 import Components from 'c'
 import markdownRun from './lib/markdown/index';
 
+import '@/assets/global.css'
+
 Vue.use(Components)
 Vue.use(markdownRun);
 

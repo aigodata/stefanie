@@ -1,0 +1,217 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+
+a:hover {
+    color: #409eff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.page-header-container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1500;
+    height: 80px;
+}
+
+.page-header-container .header {
+    box-shadow: 0 2px 8px hsla(0,0%,80%,.4);
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 80px;
+    z-index: 100;
+    position: relative;
+}
+
+.page-header-container .header .header-content {
+    width: 1140px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 32px;
+    overflow: hidden;
+}
+
+.page-header-container .header .header-content .nav {
+    float: right;
+    font-size: 14px;
+}
+
+.page-header-container .header .header-content .nav span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.page-header-container .header .header-content .nav span:last-child {
+    margin-right: 0;
+}
+
+.page-main-container {
+    width: 1140px;
+    height: calc(100% - 80px);
+    padding-top: 35px;
+    margin: 0 auto;
+}
+
+.page-main-container >.page-nav {
+    width: 240px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin-top: 80px;
+}
+
+.side-nav {
+
+}
+
+.side-nav .nav-item {
+    display: block;
+    height: 40px;
+    color: #444;
+    line-height: 40px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.side-nav .nav-group {
+    
+}
+
+.side-nav .nav-group .nav-group-title {
+    font-size: 12px;
+    color: #999;
+    line-height: 26px;
+    margin-top: 15px;
+}
+
+.side-nav .nav-group .nav-group-menu li {
+    display: block;
+    height: 40px;
+    color: #444;
+    line-height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.page-main-container >.page-content {
+    padding-top: 80px;
+    padding-left: 270px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.demo-container {
+
+}
+
+.demo-container .demo-title {
+    display: block;
+    font-size: 32px;
+}
+
+.demo-container .demo-description {
+    display: block;
+    margin: 5px 0;
+    color: #5e6d82;
+}
+
+.demo-container .demo-module {
+    position: relative;
+    margin-bottom: 15px;
+    min-width: 100%;
+    min-height: 500px;
+}
+
+.demo-container .demo-module .demo-module-title {
+    display: block;
+    font-size: 26px;
+    margin: 30px 0 10px;
+}
+
+.demo-container .demo-module .demo-module-description {
+    display: block;
+    margin: 5px 0;
+    color: #5e6d82;
+}
+
+.demo-container .demo-module .demo-module-content {
+    margin-top: 10px;
+    border: 1px solid #ebebeb;
+}
+
+.demo-container .demo-module .demo-module-content .source {
+    padding: 5px 20px;
+}
+
+.demo-container .demo-module .demo-module-content .meta {
+    background-color: #fafafa;
+    height: 100%;
+}
+
+.demo-container .demo-module .demo-module-content .control {
+    height: 35px;
+}
+
+.demo-container .demo-module .demo-module-no-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.demo-component-charts-line {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 500px;
+}
+
+.demo-component-charts-line .charts-tooltip-container {
+    padding: 5px 10px;
+}
+
+.demo-component-charts-line .charts-tooltip-container >.tooltip-title {
+    font-size: 18px;
+}
+
+.demo-component-charts-line .charts-tooltip-container >.tooltip-content {
+    padding: 3px 5px;
+    border-bottom: 1px dashed #ebebeb;
+}
+
+.demo-component-charts-line .charts-tooltip-container >.tooltip-content:last-child {
+    border-bottom: none;
+}
+
+.demo-component-charts-line .charts-tooltip-container >.tooltip-content .tooltip-label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.demo-component-charts-line .charts-tooltip-container >.tooltip-content .tooltip-value {
+    display: inline-block;
+}
