@@ -10,18 +10,23 @@
             <div class="meta">
                 <markdown-run :mark="mark" highlight-style-file-name="github" />
             </div>
+            <div class="use">
+                <markdown-run :mark="aaa"/>
+            </div>
         </div>
     </div>
 </template>
 <script>
     import ParentBasic from 'c/basic/basic';
     import ExampleMD from '!text-loader!./example.md'
+    import UseMD from '!text-loader!./use.md'
 
     export default {
         extends: ParentBasic,
         data() {
             return {
                 mark: ExampleMD,
+                aaa: UseMD,
                 basicRadio: 1,
             }
         }

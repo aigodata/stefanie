@@ -148,7 +148,7 @@ li {
 
 .demo-container .demo-module .demo-module-title {
     display: block;
-    font-size: 26px;
+    font-size: 24px;
     margin: 30px 0 10px;
 }
 
@@ -160,20 +160,55 @@ li {
 
 .demo-container .demo-module .demo-module-content {
     margin-top: 10px;
-    border: 1px solid #ebebeb;
 }
 
 .demo-container .demo-module .demo-module-content .source {
-    padding: 5px 20px;
+    padding: 10px 20px;
+    border: 1px solid #ebebeb;
+    font-size: 0;
+}
+
+.demo-container .demo-module .demo-module-content .source label {
+    font-size: 14px;
 }
 
 .demo-container .demo-module .demo-module-content .meta {
     background-color: #fafafa;
-    height: 100%;
+    font-size: 0;
 }
 
 .demo-container .demo-module .demo-module-content .control {
     height: 35px;
+}
+
+.demo-container .demo-module .demo-module-content .use {
+    
+}
+
+.demo-container .demo-module .demo-module-content .use h4 {
+    font-weight: 400;
+    color: #1f2f3d;
+}
+
+.demo-container .demo-module .demo-module-content .use table {
+    width: 100%;
+}
+
+.demo-container .demo-module .demo-module-content .use table thead {
+
+}
+
+.demo-container .demo-module .demo-module-content .use table thead th ,
+.demo-container .demo-module .demo-module-content .use table tbody td {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: 400;
+    color: #909399;
+}
+
+.demo-container .demo-module .demo-module-content .use table tbody {
+
 }
 
 .demo-container .demo-module .demo-module-no-data {
