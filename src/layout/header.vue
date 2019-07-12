@@ -1,11 +1,13 @@
 <template>
     <div class="layout-header">
         <div class="layout-header-content clearfix">
-            <img class="logo" src="../assets/images/logo-theme-chalk.svg" height="34"
-                 v-show="$store.getters.theme === 'theme-chalk'">
-            <img class="logo" src="../assets/images/logo-theme-mixiaoku.svg" height="34"
-                 v-show="$store.getters.theme === 'theme-mixiaoku'">
-            <span class="title">Stefanie</span>
+            <a href="//github.com/aigodata" class="logo" target="_blank">
+                <img src="../assets/images/logo-theme-chalk.svg" height="34"
+                     v-show="$store.getters.theme === 'theme-chalk'">
+                <img src="../assets/images/logo-theme-mixiaoku.svg" height="34"
+                     v-show="$store.getters.theme === 'theme-mixiaoku'">
+            </a>
+            <span class="title" title="斯蒂芬妮">Stefanie</span>
             <span class="sub-title">Components组件库<span class="version">{{ version }}</span></span>
             <el-select v-model="category" size="medium"
                        placeholder="请选择分类" clearable @change="changeCategory">
@@ -16,6 +18,10 @@
                     :value="item.path">
                 </el-option>
             </el-select>
+            <a href="https://github.com/aigodata/stefanie" target="_blank" title="访问github" class="github-logo">
+                <img src="../assets/images/github-theme-chalk.svg" v-show="$store.getters.theme === 'theme-chalk'">
+                <img src="../assets/images/github-theme-mixiaoku.svg" v-show="$store.getters.theme === 'theme-mixiaoku'">
+            </a>
             <ul class="theme-nav clearfix">
                 <li class="theme-nav-item" @click="changeTheme('theme-chalk')"
                     :class="{active: $store.getters.theme === 'theme-chalk'}">
@@ -47,6 +53,7 @@
             // 切换分类
             changeCategory() {
                 this.$store.commit("category", this.category);
+                this.$router.push('/main/' + this.$store.getters.theme + '/' + this.category)
             },
             // 切换主题
             changeTheme(theme, isLoad) {
@@ -106,13 +113,11 @@
     .layout-header .logo {
         margin-left: 15px;
         margin-right: 15px;
-        position: relative;
-        top: 9px;
     }
 
     .layout-header .logo img {
         position: relative;
-        top: 13px;
+        top: 9px;
     }
 
     /* 名称 */
@@ -159,4 +164,15 @@
     .layout-header .theme-nav .theme-nav-item.active {
         color: #549ef8;
     }
+
+    /* github */
+    .layout-header .github-logo {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        float: right;
+        width: 30px;
+        height: 30px;
+    }
+
 </style>
