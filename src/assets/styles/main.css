@@ -116,6 +116,11 @@ html, body {
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.layout-sidebar .layout-sidebar-content .nav-item .nav-name:hover {
+    color: #409eff;
 }
 
 .layout-sidebar .layout-sidebar-content .nav-item .nav-group .nav-item .nav-name {
@@ -136,15 +141,10 @@ html, body {
 
 #body-theme-mixiaoku .layout-sidebar .nav-item .nav-name {
     color: #ffffff;
-    cursor: pointer;
 }
 
 #body-theme-mixiaoku .layout-sidebar .nav-item .nav-name:hover {
     color: #325cd8;
-}
-
-#body-theme-mixiaoku .layout-sidebar .nav-item .nav-name {
-    color: #ffffff;
 }
 
 /* 头部 */

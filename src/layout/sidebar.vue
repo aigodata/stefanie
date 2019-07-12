@@ -30,6 +30,11 @@
                 'category'
             ])
         },
+        watch: {
+            category: function(){
+                this.init();
+            }  
+        },
         components: {
             SidebarMenu
         },
@@ -47,9 +52,9 @@
                     let o = [];
                     for (var i = 0; i < r.length; i++) {
                         if (r[i].path == p) {
-                            return r[i].children;
+                            return r[i].children || [];
                         } else {
-                            o = recursiveRoute(p, r[i].children);
+                            o = recursiveRoute(p, r[i].children || []);
                         }
                     }
                     return o;
