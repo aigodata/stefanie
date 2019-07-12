@@ -45,7 +45,7 @@ let children = [
 export default new Router({
     routes: [
     	{
-			path: '/', component: EMPTY_VIEW,
+			path: '/', meta: {name: '/'},  component: EMPTY_VIEW,
 			children: [
 				{
 					path: '/', redirect: '/main'	// 默认配置成重定向第一个菜单

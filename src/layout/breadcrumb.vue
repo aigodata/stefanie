@@ -45,7 +45,7 @@
                 let matched = this.$router.currentRoute.matched;
                 // console.log(matched);
                 for (let item of matched) {
-                    if (item.name !== "main") {
+                    if (item.meta.name !== "main" && item.meta.name !== "/") {
                         this.list.push(item)
                     }
                 }
