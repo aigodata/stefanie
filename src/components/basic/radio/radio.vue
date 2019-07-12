@@ -6,7 +6,7 @@
     </label>
 </template>
 <script>
-    import ParentBasic from 'c/basic/basic';
+    import ParentBasic from '../basic';
 
     export default {
         extends: ParentBasic,

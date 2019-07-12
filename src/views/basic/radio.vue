@@ -6,7 +6,7 @@
     </div>
 </template>
 <script>
-    import BasicUse from 'c/basic/example/radio/example'
+    import BasicUse from '@/components/basic/radio/example'
 
     export default {
         components: {

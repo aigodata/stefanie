@@ -1,5 +1,5 @@
 <script>
-    import ParentCharts from 'c/charts/charts';
+    import ParentCharts from '../charts';
     import { ExampleLine } from './line.js';
 
     export default {

@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-    import ParentBasic from 'c/basic/basic';
+    import ParentBasic from '../basic';
     import ExampleMD from '!text-loader!./example.md'
     import UseMD from '!text-loader!./use.md'
 

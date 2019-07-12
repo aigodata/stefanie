@@ -1,4 +1,4 @@
-import CustomRadio from 'c/basic/example/radio/radio'
+import CustomRadio from './basic/radio/radio'
 
 const Components = {
     install: function(Vue) {

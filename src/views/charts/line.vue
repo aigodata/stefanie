@@ -6,7 +6,7 @@
     </div>
 </template>
 <script>
-    import BasicLine from 'c/charts/example/line/example'
+    import BasicLine from '@/components/charts/line/example'
 
     export default {
         components: {
