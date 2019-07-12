@@ -28,33 +28,12 @@
             layoutBreadcrumb
         },
         computed: {
-            sidebarShow() {
-                return this.$store.state.sidebarShow
-            },
-            user() {
-                let user = this.localStore.get("user") || this.$store.state.user;
-                return user || {}
-            },
-            space() {
-                if (!this.sidebarShow) {
-                    return 0;
-                }
-                return this.expand ? '200px' : '50px'
-            },
-            permission() {
-                let permission = this.localStore.get("permission") || this.$store.state.permission;
-                return permission || {}
-            }
         },
         data() {
             return {
-                expand: true,
             }
         },
         methods: {
-            setExpand(expand) {
-                this.expand = expand;
-            }
         },
         mounted() {
         }
@@ -90,6 +69,7 @@
         z-index: 2;
         transition: all 0.15s ease;
         padding-top: 60px;
+        border-right: 1px solid #e2e2e2;
     }
 
     #app .layout-content {

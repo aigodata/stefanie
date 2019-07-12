@@ -1,10 +1,11 @@
 <template>
     <div class="layout-breadcrumb">
         <ul class="layout-breadcrumb-list clearfix">
-            <!-- 当前位置 -->
+            <!-- 当前位置
             <li class="layout-breadcrumb-current-position">
                 <i class="icon iconfont icon-weizhi"></i>当前位置 :
             </li>
+            -->
             <!-- 路由 -->
             <li v-for="(item, index) in list" class="layout-breadcrumb-item">
                 <!--<router-link-->
@@ -66,6 +67,7 @@
         position: relative;
         line-height: 50px;
         height: 50px;
+        font-size: 14px;
     }
 
     .layout-breadcrumb .layout-breadcrumb-list {
@@ -74,7 +76,7 @@
 
     .layout-breadcrumb .layout-breadcrumb-current-position {
         float: left;
-        font-size: 12px;
+        /*font-size: 12px;*/
         color: #2e3b4a;
     }
 
@@ -86,7 +88,7 @@
     .layout-breadcrumb .layout-breadcrumb-list .layout-breadcrumb-item {
         float: left;
         color: #2e3b4a;
-        font-size: 12px;
+        /*font-size: 12px;*/
     }
 
     .layout-breadcrumb .layout-breadcrumb-list .layout-breadcrumb-item .router-link-active {
