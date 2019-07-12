@@ -7,6 +7,8 @@
     </ul>
 </template>
 <script>
+    import { mapGetters } from 'vuex'
+
     export default {
         name: 'SidebarMenu',
         props: {
@@ -19,10 +21,10 @@
                 default: ''
             }
         },
-        data() {
-            return {
-                theme: 'theme-chalk',
-            }
+        computed: {
+            ...mapGetters([
+                'theme'
+            ])
         },
         methods: {
             // 切换菜单
