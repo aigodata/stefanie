@@ -128,7 +128,7 @@
         font-size: 16px;
         color: #333;
         line-height: 60px;
-        padding-right: 10px;
+        padding-right: 20px;
     }
 
     .layout-header .sub-title .version {

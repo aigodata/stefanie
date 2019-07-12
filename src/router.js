@@ -20,6 +20,9 @@ let children = [
 		path: 'basic', component: EMPTY_VIEW, meta: {name: '基础组件'},
 		children: [
 			{
+				path: '/', redirect: 'radio'
+			},
+			{
 				path: 'radio', meta: {name: '单选框'},
 				component: () => import('@/views/basic/radio'),
 			}
@@ -28,6 +31,9 @@ let children = [
 	{
 		path: 'chart', component: EMPTY_VIEW, meta: {name: '图表'},
 		children: [
+			{
+				path: '/', redirect: 'line'
+			},
 			{
 				path: 'line', meta: {name: '线形图'},
 				component: () => import('@/views/charts/line'),
