@@ -90,6 +90,7 @@
         bottom: 0;
         z-index: 2;
         transition: all 0.15s ease;
+        padding-top: 60px;
     }
 
     #app .layout-content {

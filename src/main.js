@@ -16,7 +16,6 @@ import '@/assets/fonts/iconfont.js'							// 图标字体
 import 'element-ui/lib/theme-chalk/index.css' 				// element-ui
 import '@/assets/styles/theme.css'							// 定制element-ui
 import '@/assets/styles/main.css'							// 主样式文件
-// import '@/assets/global.css'
 
 Vue.use(ElementUI, {locale, size: 'small'});
 

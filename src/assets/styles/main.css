@@ -2,6 +2,31 @@
  * 主体部分公共样式
  *    全局类的样式, 必须以 app- 作为开头
  */
+ body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+
+a:hover {
+    color: #409eff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
 
 /* input背景色默认是黄色 */
 input:-webkit-autofill {
@@ -71,6 +96,32 @@ html, body {
     /* 对字体进行抗锯齿渲染 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/*!* 侧边栏-默认 *!*/
+.layout-sidebar {}
+
+.layout-sidebar .layout-sidebar-content {
+    padding: 5px 10px;
+}
+
+.layout-sidebar .layout-sidebar-content .nav-item .nav-name {
+    display: block;
+    height: 40px;
+    color: #444;
+    line-height: 40px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.layout-sidebar .layout-sidebar-content .nav-item .nav-group .nav-item .nav-name {
+    padding-left: 20px;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
 }
 
 #body-theme-mixiaoku {
