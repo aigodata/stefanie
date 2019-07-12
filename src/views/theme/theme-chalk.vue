@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    import '~@aigodata/element-theme/lib/theme-chalk/index.css';
+    import '@aigodata/element-theme/lib/theme-chalk/index.css';
     export default {
         name: 'theme-chalk',
         mounted() {

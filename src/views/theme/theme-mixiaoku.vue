@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    import '~@aigodata/element-theme/lib/theme-mixiaoku/index.css';
+    import '@aigodata/element-theme/lib/theme-mixiaoku/index.css';
     export default {
         name: 'theme-mixiaoku',
         mounted() {

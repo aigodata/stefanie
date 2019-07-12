@@ -161,7 +161,7 @@ html, body {
 }
 
 #body-theme-mixiaoku .layout-header .theme-nav-item:hover,
-#body-theme-mixiaoku .layout-header .header .theme-nav-item.active {
+#body-theme-mixiaoku .layout-header .theme-nav-item.active {
     color: #549ef8;
 }
 
