@@ -53,6 +53,7 @@
             // 切换分类
             changeCategory() {
                 this.$store.commit("category", this.category);
+                this.$router.push('/main/' + this.$store.getters.theme + '/' + this.category)
             },
             // 切换主题
             changeTheme(theme, isLoad) {
