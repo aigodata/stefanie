@@ -54,9 +54,9 @@
                 this.$store.commit("theme", theme);
                 let pathName = location.pathname
                 let origin = location.origin
-                let paths = this.$route.path.split('/');
-                let currentModule = paths[paths.length - 1];
-                location.href = `${origin}${pathName}${'?' + 'random=' + Date.now()}#/main/${theme}/${currentModule}`;
+                // let paths = this.$route.path.split('/');
+                // let currentModule = paths[paths.length - 1];
+                location.href = `${origin}${pathName}${'?' + 'random=' + Date.now()}#/main/${theme}`;
             },
             // 找到大分类列表
             handleCategoryList(tree, parentPath) {

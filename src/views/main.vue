@@ -84,7 +84,6 @@
 
     #app .layout-sidebar {
         width: 200px;
-        background: linear-gradient(90deg, RGBA(16, 84, 156, 1) 50%, RGBA(29, 95, 166, 1));
         position: absolute;
         top: 0;
         bottom: 0;

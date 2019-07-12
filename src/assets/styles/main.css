@@ -2,10 +2,10 @@
  * 主体部分公共样式
  *    全局类的样式, 必须以 app- 作为开头
  */
- body {
+body {
     padding: 0;
     margin: 0;
-    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
 }
 
 a {
@@ -99,7 +99,8 @@ html, body {
 }
 
 /*!* 侧边栏-默认 *!*/
-.layout-sidebar {}
+.layout-sidebar {
+}
 
 .layout-sidebar .layout-sidebar-content {
     padding: 5px 10px;
@@ -124,36 +125,27 @@ html, body {
     line-height: 26px;
 }
 
+
+/* 日食 深色主题 */
+
 #body-theme-mixiaoku {
     background-color: #1a2029;
 }
 
-/*!* 侧边栏 *!*/
+/* 侧边栏 */
 
-/*#body-theme-mixiaoku .side-nav .nav-item .nav-item a {*/
-/*color: #ffffff;*/
-/*cursor: pointer;*/
-/*}*/
+#body-theme-mixiaoku .layout-sidebar .nav-item .nav-name {
+    color: #ffffff;
+    cursor: pointer;
+}
 
-/*#body-theme-mixiaoku .side-nav .nav-item .nav-item a:hover {*/
-/*color: #325cd8;*/
-/*}*/
+#body-theme-mixiaoku .layout-sidebar .nav-item .nav-name:hover {
+    color: #325cd8;
+}
 
-/*#body-theme-mixiaoku .side-nav .nav-item a {*/
-/*color: #ffffff;*/
-/*}*/
-
-/*#body-theme-mixiaoku .page-container h2, #body-theme-mixiaoku .page-container h3, #body-theme-mixiaoku .page-container h4, #body-theme-mixiaoku .page-container h5 {*/
-/*color: #ffffff;*/
-/*}*/
-
-/*#body-theme-mixiaoku .page-container p {*/
-/*color: #919bb1;*/
-/*}*/
-
-/*#body-theme-mixiaoku .demo-block {*/
-/*border-color: rgba(255, 255, 255, 0.3);*/
-/*}*/
+#body-theme-mixiaoku .layout-sidebar .nav-item .nav-name {
+    color: #ffffff;
+}
 
 /* 头部 */
 #body-theme-mixiaoku .layout-header {
