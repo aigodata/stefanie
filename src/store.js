@@ -14,12 +14,19 @@ const store = new Vuex.Store({
 			localStore.set('theme', params);
 			state.theme = params;
 		},
+		category(state, params) {
+			localStore.set('category', params);
+			state.category = params;
+		},
 	},
 	actions: {
 	},
 	getters: {
 		theme: (state) => {
 			return state.theme || localStore.get('theme') || 'theme-chalk'
+		},
+		category: (state) => {
+			return state.category || localStore.get('category') || 'basic'
 		},
 	}
 })

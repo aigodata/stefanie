@@ -17,8 +17,7 @@ let children = [
 		path: '/', redirect: 'basic'
 	},
 	{
-		path: 'basic',
-		component: EMPTY_VIEW,
+		path: 'basic', component: EMPTY_VIEW, meta: {name: '基础组件'},
 		children: [
 			{
 				path: 'radio', meta: {name: '单选框'},
@@ -27,8 +26,7 @@ let children = [
 		]
 	},
 	{
-		path: 'chart',
-		component: EMPTY_VIEW,
+		path: 'chart', component: EMPTY_VIEW, meta: {name: '图表'},
 		children: [
 			{
 				path: 'line', meta: {name: '线形图'},
@@ -37,8 +35,7 @@ let children = [
 		]
 	},
 	{
-		path: 'template',
-		component: EMPTY_VIEW,
+		path: 'template', component: EMPTY_VIEW, meta: {name: '模板'},
 	}
 ]
 

@@ -11,9 +11,9 @@
                        placeholder="请选择分类" clearable @change="changeCategory">
                 <el-option
                     v-for="item in categoryList"
-                    :key="item.value"
-                    :label="item.label"
-                    :value="item.value">
+                    :key="item.path"
+                    :label="item.meta.name"
+                    :value="item.path">
                 </el-option>
             </el-select>
             <ul class="theme-nav clearfix">
@@ -58,6 +58,21 @@
                 let currentModule = paths[paths.length - 1];
                 location.href = `${origin}${pathName}${'?' + 'random=' + Date.now()}#/main/${theme}/${currentModule}`;
             },
+            // 找到大分类列表
+            handleCategoryList(tree, parentPath) {
+                for (let d of tree) {
+                    if (d.path === parentPath) {
+                        // 过滤重定向redirect
+                        return d.children.filter(d => !d.redirect)
+                    }
+                    if (d.children && d.children.length > 0) {
+                        let list = this.handleCategoryList(d.children, parentPath)
+                        if (list && list.length > 0) {
+                            return list
+                        }
+                    }
+                }
+            }
         },
         mounted() {
             // 主题
@@ -69,7 +84,10 @@
             document.body.setAttribute('id', 'body-' + theme)
             // 分类
             this.category = this.$store.getters.category || 'basic';
-            console.log(this.$router)
+            // 分类列表
+            let tree = this.$router.options.routes
+            let parentPath = this.$store.getters.theme
+            this.categoryList = this.handleCategoryList(tree, parentPath)
         }
     }
 </script>
