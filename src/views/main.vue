@@ -2,9 +2,9 @@
     <div id="app">
         <!-- 头部 -->
         <layout-header></layout-header>
+        <!-- 侧边栏 -->
+        <layout-sidebar></layout-sidebar>
         <div class="layout-container">
-            <!-- 侧边栏 -->
-            <layout-sidebar></layout-sidebar>
             <div class="app-content">
                 <!-- 面包屑 -->
                 <layout-breadcrumb></layout-breadcrumb>
@@ -81,6 +81,7 @@
     #app .layout-container {
         height: calc(100% - 60px);
         position: relative;
+        padding-left: 200px;
     }
 
     #app .layout-sidebar {
@@ -100,7 +101,6 @@
         z-index: 1;
         overflow: auto;
         transition: all 0.15s ease;
-        padding-left: 200px;
     }
 </style>
 

@@ -6,25 +6,21 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	state: {
-		// user: null,							// 登录的用户个人信息
+		theme: '',			// 主题 theme-chalk  theme-mixiaoku
+		category: '',		// 大分类
 	},
 	mutations: {
-		// // 用户信息
-		// user(state, params) {
-		// 	localStore.set('user', params);
-		// 	state.user = params;
-		// },
+		theme(state, params) {
+			localStore.set('theme', params);
+			state.theme = params;
+		},
 	},
 	actions: {
-		// ModifyState(state, params) {
-		// 	commit('ModifyState', params)
-		// }
 	},
 	getters: {
-		// // 登录的个人信息
-		// user: (state) => {
-		// 	return state.user || localStore.get('user')
-		// },
+		theme: (state) => {
+			return state.theme || localStore.get('theme') || 'theme-chalk'
+		},
 	}
 })
 
