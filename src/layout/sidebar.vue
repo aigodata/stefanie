@@ -1,7 +1,7 @@
 <template>
     <div class="layout-sidebar">
         <ul class="layout-sidebar-content">
-            <SidebarMenu v-if="navMenus.length" :data="navMenus" :parentPath="path" />
+            <SidebarMenu v-if="navMenus.length" :data="navMenus" :parentPath="category" />
         </ul>
         <!-- <ul class="layout-sidebar-content">
             <li>
@@ -46,14 +46,13 @@
         },
         data() {
             return {
-                theme: 'theme-chalk',
-                path: 'basic',
                 navMenus: []
             }
         },
         computed: {
             ...mapGetters([
-                // 等名字...
+                'theme',
+                'category'
             ])
         },
         components: {
@@ -66,7 +65,7 @@
             // 初始化菜单
             init() {
                 let routes = this.$router.options.routes || [];
-                this.navMenus = recursiveRoute(this.path, routes);
+                this.navMenus = recursiveRoute(this.category, routes);
 
                 function recursiveRoute(p = '', r = []) {
                     if (!r.length) { return []; }
