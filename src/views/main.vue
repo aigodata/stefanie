@@ -5,12 +5,10 @@
         <!-- 侧边栏 -->
         <layout-sidebar></layout-sidebar>
         <div class="layout-container">
-            <div class="app-content">
-                <!-- 面包屑 -->
-                <layout-breadcrumb></layout-breadcrumb>
-                <!-- 页面 -->
-                <div class="layout-content"><router-view></router-view></div>
-            </div>
+            <!-- 面包屑 -->
+            <layout-breadcrumb></layout-breadcrumb>
+            <!-- 页面 -->
+            <div class="layout-content"><router-view></router-view></div>
         </div>
     </div>
 </template>
@@ -95,12 +93,13 @@
     }
 
     #app .layout-content {
-        position: relative;
-        height: 100%;
-        background: #f8fafc;
-        z-index: 1;
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: 200px;
+        right: 0;
         overflow: auto;
-        transition: all 0.15s ease;
+        padding: 0 0 0 20px;
     }
 </style>
 

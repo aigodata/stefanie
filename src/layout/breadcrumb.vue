@@ -64,11 +64,12 @@
 
     .layout-breadcrumb {
         position: relative;
+        line-height: 50px;
+        height: 50px;
     }
 
     .layout-breadcrumb .layout-breadcrumb-list {
         margin-left: 20px;
-        line-height: 50px;
     }
 
     .layout-breadcrumb .layout-breadcrumb-current-position {
