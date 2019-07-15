@@ -6,7 +6,7 @@
     </label>
 </template>
 <script>
-    import ParentBasic from '../basic';
+    import ParentBasic from './../basic';
 
     export default {
         extends: ParentBasic,
@@ -31,7 +31,10 @@
         methods: {
             handleRadioChange() {
                 this.$emit('input', this.label);
-            }
+            },
+            aaa(){
+                console.info('---1-223--3')
+            },
         }
     }
 </script>

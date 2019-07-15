@@ -1,6 +1,7 @@
-export class ExampleLine {
-    constructor(data) {
-        this.data = data;
+export class CustomHandle {
+    constructor(data, config) {
+        this.data = data || [];
+        this.config = config || {};
         this.option = {};
     }
     // 初始化
@@ -16,14 +17,15 @@ export class ExampleLine {
     // 配置标题
     setTitle() {
         // 详见 https://echarts.baidu.com/option.html#title  
-        this.option.title = {
+        let title = {
             text: '我是一个折线图',
             top: '15',
             left: 'center',
             textStyle: {
                 color: 'lime'
             }
-        }
+        };
+        this.option.title = Object.assign(title, this.config.title || {});
     };
     // 图例
     setLegend() {
@@ -41,13 +43,14 @@ export class ExampleLine {
     // 
     setGrid() {
         // 详见 https://echarts.baidu.com/option.html#grid
-        this.option.grid = {
+        let grid = {
             show: true,
             borderWidth: 0,
             backgroundColor: '#fff',
             shadowColor: 'rgba(0, 0, 0, 0.3)',
             shadowBlur: 2
-        }
+        };
+        this.option.grid = Object.assign(grid, this.config.grid || {});
     };
     // 配置提示框
     setTooltip() {
@@ -71,7 +74,7 @@ export class ExampleLine {
                         + '</div>';
                 })
                 return '<div class="charts-tooltip-container">'
-                    + '<span class="tooltip-title">'+ title + '</span>'
+                    + '<span class="tooltip-title">' + title + '</span>'
                     + labels
                     + '</div>';
             }
@@ -96,7 +99,7 @@ export class ExampleLine {
         let yAxis = {
             type: 'value'
         };
-        this.option.yAxis = yAxis;
+        this.option.yAxis = Object.assign(yAxis, this.config.yAxis || {});
     };
     // 设置数据
     setSeries() {
@@ -106,14 +109,15 @@ export class ExampleLine {
         this.data.forEach(item => {
             let t = {
                 type: 'line',
-                data: []
-            }
+            };
+            Object.assign(t, this.config.series || {});
+            t.name = item.name;
+            t.data = [];
             item.data.forEach(childItem => {
                 t.data.push(childItem.value);
             });
             series.push(t);
         });
-
         this.option.series = series;
     };
 }

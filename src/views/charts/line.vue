@@ -1,17 +1,14 @@
 <template>
-    <div class="demo-container">
-        <span class="demo-title">Line 折线图</span>
-        <span class="demo-description">*****</span>
-        <BasicLine :data="data" />
+    <div class="charts-container">
+        <span class="charts-title">Echarts</span>
+        <span class="charts-description">*****</span>
+        <Custom-Charts type="chartsLine" :data="data"  />
+
+        <!-- 切换图表 -->
     </div>
 </template>
 <script>
-    import BasicLine from '@/components/charts/line/example'
-
     export default {
-        components: {
-            BasicLine
-        },
         data() {
             return {
                 data: [

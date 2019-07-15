@@ -17,12 +17,10 @@
     </div>
 </template>
 <script>
-    import ParentBasic from '../basic';
     import ExampleMD from '!text-loader!./example.md'
     import UseMD from '!text-loader!./use.md'
 
     export default {
-        extends: ParentBasic,
         data() {
             return {
                 mark: ExampleMD,
