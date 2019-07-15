@@ -4,11 +4,13 @@
 <script>
     import Charts_Line from './echarts/line/line'
     import Charts_Bar from './echarts/bar/bar'
+    import Charts_Pie from './echarts/pie/pie'
 
     // 动态组件大集合
     const CUSTOM_COMPONENTS = {
         chartsLine: Charts_Line,
-        chartsBar: Charts_Bar
+        chartsBar: Charts_Bar,
+        chartsPie: Charts_Pie
     };
 
     export default {
