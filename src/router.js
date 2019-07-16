@@ -28,7 +28,7 @@ let children = [{
             },
             {
                 path: 'radio',
-                meta: { name: '单选框' },
+                meta: { name: 'radio 单选框' },
                 component: () =>
                     import ('@/views/basic/radio/index'),
             }
@@ -44,7 +44,7 @@ let children = [{
             },
             {
                 path: 'line',
-                meta: { name: '线形图(line)' },
+                meta: { name: 'line 线形图' },
                 component: () =>
                     import ('@/views/charts/line'),
                 children: [{
@@ -57,13 +57,13 @@ let children = [{
             },
             {
                 path: 'pie',
-                meta: { name: '饼图(pie)' },
+                meta: { name: 'pie 饼图' },
                 component: () =>
                     import ('@/views/charts/pie'),
             },
             {
                 path: 'scatter',
-                meta: { name: '散点图(scatter)' },
+                meta: { name: 'scatter 散点图' },
                 component: () =>
                     import ('@/views/charts/scatter'),
             }

@@ -9,7 +9,7 @@
   export default {
     data() {
       return {
-        radio: 2
+        radio: 1
       };
     }
   }
