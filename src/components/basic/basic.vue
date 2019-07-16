@@ -35,7 +35,8 @@
                 default: function () {
                     return {
                         label: 'label',
-                        children: 'children'
+                        children: 'children',
+                        className: ''
                     }
                 }
             }

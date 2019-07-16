@@ -14,6 +14,7 @@
 |:-|:-:|:-:|:-:|-:|
 |label|指定节点标签为节点对象的某个属性值|string|-|-|
 |children|指定子节点对象的某个属性值|string|-|-|
+|className|自定义样式名字|string|-|-|
 
 #### Radio Events ####
 

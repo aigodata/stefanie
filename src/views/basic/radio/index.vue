@@ -37,7 +37,7 @@
             return {
                 exampleMD: ExampleMD,
                 useMD: UseMD,
-                radio: 1,
+                radio: 2,
             }
         },
         computed: {
