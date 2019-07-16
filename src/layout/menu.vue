@@ -1,8 +1,8 @@
 <template>
-    <ul class="nav-group">
+    <ul class="ai-nav-group">
         <template v-for="item in data">
-            <li v-if="!item.redirect" class="nav-item">
-                <span class="nav-name" @click="handleRouteChange($event)" :data-router="parentPath + '/' + item.path">{{ item.meta.name }}</span>
+            <li v-if="!item.redirect" class="ai-nav-item">
+                <span class="ai-nav-name" v-if="item.meta" @click="handleRouteChange($event)" :data-router="parentPath + '/' + item.path">{{ item.meta.name }}</span>
                 <SidebarMenu v-if='Array.isArray(item.children)' :data="item.children" :parentPath="parentPath + '/' + item.path"/>
             </li>
         </template>
