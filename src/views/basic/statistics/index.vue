@@ -10,7 +10,8 @@
       <div class="component-example-content">
         <!-- 组件使用 -->
         <div class="source">
-          <ai-statistics icon="el-icon-upload" data="100" label="资产总值" customClass="addClass" customStyle="width:300px;height:150px;" />
+           <ai-statistics icon="el-icon-upload" data="100" label="资产总值" customClass="" customStyle="" />
+           <ai-statistics icon="el-icon-upload" data="100" label="资产总值" customClass="addClass" customStyle="width:300px;height:150px;" />
         </div>
         <!-- 代码参考 -->
         <div class="example">

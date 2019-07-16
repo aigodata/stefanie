@@ -85,6 +85,7 @@ export default {
   left: 0;
   right: 0;
   color: red;
+  font-size: 30px;
 }
 .ai-statistics .ai-icon i::before {
   margin: auto;
