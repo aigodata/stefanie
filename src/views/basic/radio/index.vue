@@ -1,13 +1,13 @@
 <template>
-    <!-- 单选框组件示例 -->
-    <div class="compontent-container">
-        <span class="compontent-title">Radio 单选框</span>
-        <span class="compontent-description">在一组备选项中进行单选</span>
+    <!-- 组件示例 -->
+    <div class="component-container">
+        <span class="component-title">Radio 单选框</span>
+        <p class="component-description">在一组备选项中进行单选</p>
         <!-- 示例 -->
-        <div class="compontent-example">
-            <span class="compontent-example-title">基础用法</span>
-            <span class="compontent-example-description">由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。</span>
-            <div class="compontent-example-content compontent-component-basic-radio">
+        <div class="component-example">
+            <span class="component-example-title">基础用法</span>
+            <p class="component-example-description">由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。</p>
+            <div class="component-example-content">
                 <!-- 组件使用 -->
                 <div class="source">
                     <ai-radio v-model="radio" label="1">选择一</ai-radio>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <!-- 组件参数说明 -->
-        <div class="compontent-use">
+        <div class="component-use">
             <markdown-run :mark="useMD"></markdown-run>
         </div>
     </div>

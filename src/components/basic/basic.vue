@@ -12,6 +12,10 @@
             loading: {
                 type: Boolean,
                 default: false,
+            },
+            theme: {
+                type: String,
+                default: 'chalk',
             }
         },
         data(){
