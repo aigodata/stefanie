@@ -17,14 +17,6 @@
         data(){
             return {
             }
-        },
-        mounted () {
-            this.load();
-        },
-        methods: {
-            load(){
-                typeof this.aaa === 'function' && this.aaa();
-            }
         }
     }
 </script>

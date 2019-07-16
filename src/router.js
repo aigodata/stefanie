@@ -30,7 +30,7 @@ let children = [{
                 path: 'radio',
                 meta: { name: '单选框' },
                 component: () =>
-                    import ('@/views/basic/radio'),
+                    import ('@/views/basic/radio/index'),
             }
         ]
     },
