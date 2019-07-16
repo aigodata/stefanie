@@ -1,15 +1,19 @@
 <template>
-    <label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
-        <input type="radio" name="name || 'radio_' + radioVal" :disabled="disabled" :checked="label == model ? 'true' : ''"
-            @change="handleRadioChange" />
-        <slot></slot>
-    </label>
+    <!-- 单选按钮 | 可支持键盘空格按钮 -->
+    <div class="ai-radio" :class="theme">
+        <label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
+            <input type="radio" name="name || 'radio_' + radioVal" :disabled="disabled" :checked="label == model ? 'true' : ''"
+                @change="change" />
+            <slot></slot>
+        </label>
+    </div>
 </template>
 <script>
-    import ParentBasic from './../basic';
+    import parent from '@/components/basic/basic';
 
     export default {
-        extends: ParentBasic,
+        extends: parent,
+        name: 'ai-radio',
         props: {
             label: {
                 type: [String, Number, Boolean],
@@ -25,16 +29,33 @@
                 }
             }
         },
-        mounted() {
-            this.model = this.value !== 'undefined' ? this.value : '';
-        },
         methods: {
-            handleRadioChange() {
+            change() {
                 this.$emit('input', this.label);
             },
-            aaa(){
-                console.info('---1-223--3')
+            clear() {
+
             },
+            load() {
+                this.model = this.value !== 'undefined' ? this.value : '';
+            }
+        },
+        mounted() {
+            this.load();
         }
     }
 </script>
+<style>
+    .ai-radio {
+        display: inline-block;
+    }
+    /**
+    * -------------------  白垩纪 主题 样式
+    */
+    .ai-radio .theme-chalk {}
+
+    /**
+    * -------------------  日食 主题 样式
+    */
+    .ai-radio .theme-mixiaoku {}
+</style>

@@ -1,9 +1,9 @@
-import CustomRadio from './basic/radio/radio'
+import AIRadio from './basic/radio/radio'
 import CustomCharts from './charts/aigo-charts'
 
 const Components = {
     install: function(Vue) {
-        Vue.component('Custom-Radio', CustomRadio);
+        Vue.component('ai-radio', AIRadio);
         Vue.component('Custom-Charts', CustomCharts);
     }
 }

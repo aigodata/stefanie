@@ -12,18 +12,19 @@
             loading: {
                 type: Boolean,
                 default: false,
+            },
+            /**
+             * 主题
+             * theme-chalk -> 白垩纪(浅色)
+             * theme-mixiaoku -> 日食(深色)
+            */
+            theme: {
+                type: String,
+                default: 'theme-chalk',
             }
         },
-        data(){
+        data() {
             return {
-            }
-        },
-        mounted () {
-            this.load();
-        },
-        methods: {
-            load(){
-                typeof this.aaa === 'function' && this.aaa();
             }
         }
     }
