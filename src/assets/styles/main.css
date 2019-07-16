@@ -141,10 +141,13 @@ body {
     font-weight: 700;
 }
 
+.ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-item {
+    color: #444;
+}
+
 .ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-item .ai-nav-name {
     display: block;
     height: 40px;
-    color: #444;
     line-height: 40px;
     font-size: 14px;
     overflow: hidden;
@@ -157,11 +160,15 @@ body {
     color: #409eff;
 }
 
-.ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-item .ai-nav-group .ai-nav-item .ai-nav-name {
+.ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-group .ai-nav-item .ai-nav-name {
     padding-left: 20px;
     font-size: 14px;
     height: 26px;
     line-height: 26px;
+}
+
+.ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-group .active {
+    color: #409eff;
 }
 
 .ai-layout-container .ai-layout-content .component-container {}

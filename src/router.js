@@ -31,6 +31,12 @@ let children = [{
                 meta: { name: 'radio 单选框' },
                 component: () =>
                     import ('@/views/basic/radio/index'),
+            },
+            {
+                path: 'statistics',
+                meta: { name: 'statistics 统计' },
+                component: () =>
+                    import ('@/views/basic/statistics/index'),
             }
         ]
     },
