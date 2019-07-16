@@ -47,9 +47,4 @@
             }
         }
     }
-  },
-  data() {
-    return {};
-  }
-};
 </script>
