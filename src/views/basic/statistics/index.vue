@@ -10,8 +10,8 @@
       <div class="component-example-content">
         <!-- 组件使用 -->
         <div class="source">
-           <ai-statistics icon="el-icon-upload" data="100" label="资产总值" customClass="" customStyle="" />
-           <ai-statistics icon="el-icon-upload" data="100" label="资产总值" customClass="addClass" customStyle="width:300px;height:150px;" />
+          <ai-statistics icon="el-icon-upload" data="100" label="资产总值"  />
+          <ai-statistics icon="el-icon-upload" data="100" label="资产总值" className="addClass" />
         </div>
         <!-- 代码参考 -->
         <div class="example">
@@ -26,30 +26,20 @@
   </div>
 </template>
 <script>
-import ExampleMD from '!text-loader!./example/example.md'
-import UseMD from '!text-loader!./use.md'
+import ExampleMD from "!text-loader!./example/example.md";
+import UseMD from "!text-loader!./use.md";
 
 export default {
-  props: {
-
-  },
-  data () {
+  props: {},
+  data() {
     return {
       exampleMD: ExampleMD,
-      useMD: UseMD,
-    }
+      useMD: UseMD
+    };
   },
-  computed: {
-
-  },
-  watch: {
-
-  },
-  methods: {
-
-  },
-  mounted () {
-
-  }
-}
+  computed: {},
+  watch: {},
+  methods: {},
+  mounted() {}
+};
 </script>

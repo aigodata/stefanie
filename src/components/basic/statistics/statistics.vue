@@ -1,23 +1,27 @@
 <template>
   <!-- 统计展示 -->
-  <div class="ai-statistics" :class="customClass" :style="customStyle">
+  <div class="ai-statistics" :class="className">
     <div class="ai-icon">
       <i :class="icon"></i>
     </div>
-    <div class="ai-label"><span>{{label}}</span></div>
-    <div class="ai-data"><span>{{data}}</span></div>
+    <div class="ai-label">
+      <span>{{label}}</span>
+    </div>
+    <div class="ai-data">
+      <span>{{data}}</span>
+    </div>
   </div>
 </template>
 <script>
-import parent from '@/components/basic/basic';
+import parent from "@/components/basic/basic";
 
 export default {
   extends: parent,
-  name: 'ai-statistics',
+  name: "ai-statistics",
   props: {
     label: {
       type: [String, Number],
-      default: '统计'
+      default: "统计"
     },
     data: {
       type: [String, Number],
@@ -25,40 +29,24 @@ export default {
     },
     icon: {
       type: [String],
-      default: 'el-icon-info'
+      default: "el-icon-info"
     },
-    customClass: {
-      type: [String],
-      default: ''
-    },
-    customStyle: {
-      type: [String],
-      default: ''
-    }
   },
-  data () {
-    return {
-    }
+  data() {
+    return {};
   },
-  computed: {
-  },
-  watch: {
-  },
+  computed: {},
+  watch: {},
   // 组件方法实例
-  methods: {
-
-  },
+  methods: {},
   // DOM渲染完毕
-  mounted () {
-    this.defaultClass = this.class;
-  },
+  mounted() {},
   // 组件销毁
-  destroyed () {
-
-  }
-}
+  destroyed() {}
+};
 </script>
 <style>
+
 .ai-statistics {
   min-width: 200px;
   height: 100px;
@@ -112,6 +100,9 @@ export default {
   font-size: 30px;
   width: 50%;
   height: 50%;
+}
+.addClass{
+  width:300px;height:150px;
 }
 /**
     * -------------------  白垩纪 主题 样式

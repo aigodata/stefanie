@@ -7,6 +7,7 @@ const Components = {
         Vue.component('ai-radio', AIRadio);
         Vue.component('ai-statistics', AIStatistics);
         Vue.component('Custom-Charts', CustomCharts);
+        // Vue.componetns('ai-radio', await import ('./basic/radio/radio')); 实验失败...
     }
 }
 export default Components;
