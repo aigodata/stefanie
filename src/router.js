@@ -44,15 +44,28 @@ let children = [{
             },
             {
                 path: 'line',
-                meta: { name: '线形图' },
+                meta: { name: '线形图(line)' },
                 component: () =>
                     import ('@/views/charts/line'),
+                children: [{
+                    path: 'line-a',
+                    mata: { name: '线形图-a' },
+                    component: () => {
+                        import ('@/views/charts/line')
+                    }
+                }]
             },
             {
                 path: 'pie',
-                meta: { name: '饼图' },
+                meta: { name: '饼图(pie)' },
                 component: () =>
                     import ('@/views/charts/pie'),
+            },
+            {
+                path: 'scatter',
+                meta: { name: '散点图(scatter)' },
+                component: () =>
+                    import ('@/views/charts/scatter'),
             }
         ]
     },

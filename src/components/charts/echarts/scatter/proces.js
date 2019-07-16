@@ -6,18 +6,13 @@ export class CustomHandle {
         }
         // 初始化
     init() {
-        this.setTitle();
-        this.setLegend();
-        this.setGrid();
-        this.setTooltip();
-        this.setVisualMap();
-        this.setSeries();
+
     };
     // 配置标题
     setTitle() {
         // 详见 https://echarts.baidu.com/option.html#title
         let title = {
-            text: '是个饼图test',
+            text: '是个散点',
             left: 'center',
             top: 15,
             textStyle: {
@@ -76,7 +71,7 @@ export class CustomHandle {
         let series = [];
         this.data.forEach(item => {
             let t = {
-                type: 'pie',
+                type: 'scatter',
             };
             Object.assign(t, this.config.series || {});
             t.name = item.name;

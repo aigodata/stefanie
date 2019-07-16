@@ -5,12 +5,14 @@
     import Charts_Line from './echarts/line/line'
     import Charts_Bar from './echarts/bar/bar'
     import Charts_Pie from './echarts/pie/pie'
+    import Charts_Scatter from './echarts/scatter/scatter'
 
     // 动态组件大集合
     const CUSTOM_COMPONENTS = {
         chartsLine: Charts_Line,
         chartsBar: Charts_Bar,
-        chartsPie: Charts_Pie
+        chartsPie: Charts_Pie,
+        chartsScatter: Charts_Scatter
     };
 
     export default {
@@ -50,35 +52,35 @@
 <style>
     .layout-container .layout-content {}
 
-    .layout-container .layout-content .charts-container {
+    .layout-container .layout-content .ai-charts-container {
         width: 100%;
         height: 100%;
     }
 
-    .layout-container .layout-content .charts-container .charts-title {
+    .layout-container .layout-content .ai-charts-container .ai-charts-title {
         display: block;
     }
 
-    .layout-container .layout-content .charts-container .charts-description {
+    .layout-container .layout-content .ai-charts-container .ai-charts-description {
         display: block;
     }
 
-    .layout-container .layout-content .charts-container .charts-module {
+    .layout-container .layout-content .ai-charts-container .ai-charts-module {
         height: 100%;
     }
 
-    .layout-container .layout-content .charts-container .charts-module-content {
+    .layout-container .layout-content .ai-charts-container .ai-charts-module-content {
         width: 100%;
         height: 100%;
     }
 
-    .layout-container .layout-content .charts-container .charts-module-empty-content {
+    .layout-container .layout-content .ai-charts-container .ai-charts-module-empty-content {
         position: relative;
         width: 100%;
         height: 100%;
     }
 
-    .layout-container .layout-content .charts-container .charts-module-empty-content .charts-module-no-data {
+    .layout-container .layout-content .ai-charts-container .ai-charts-module-empty-content .ai-charts-module-no-data {
         position: absolute;
         top: 50%;
         left: 50%;

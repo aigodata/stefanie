@@ -1,13 +1,12 @@
 <template>
-
-  <div class="charts-container">
-    <span class="charts-title">Echarts</span>
-    <span class="charts-description">*****</span>
+  <div class="ai-charts-container">
+    <span class="ai-charts-title">Echarts</span>
+    <span class="ai-charts-description">*****</span>
     <Custom-Charts type="chartsPie" :data="data" />
-
     <!-- 切换图表 -->
   </div>
 </template>
+
 <script>
 export default {
   data () {

@@ -2,6 +2,7 @@
  * 主体部分公共样式
  *    全局类的样式, 必须以 app- 作为开头
  */
+
 body {
     padding: 0;
     margin: 0;
@@ -28,7 +29,9 @@ li {
     list-style-type: none;
 }
 
+
 /* input背景色默认是黄色 */
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
@@ -41,9 +44,12 @@ input:-webkit-autofill {
     visibility: hidden;
 }
 
+
 /*滚动条样式--webkit*/
 
+
 /* 整体 */
+
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -52,13 +58,17 @@ input:-webkit-autofill {
     cursor: pointer;
 }
 
+
 /* 内层轨道 */
+
 ::-webkit-scrollbar-track-piece {
     -webkit-border-radius: 0;
     cursor: pointer;
 }
 
+
 /* 滑块 */
+
 ::-webkit-scrollbar-thumb {
     height: 50px;
     -webkit-border-radius: 6px;
@@ -68,7 +78,9 @@ input:-webkit-autofill {
     cursor: pointer;
 }
 
+
 /* 滑块悬停 */
+
 ::-webkit-scrollbar-thumb:hover {
     height: 50px;
     background: #d7d5d5;
@@ -77,18 +89,25 @@ input:-webkit-autofill {
     cursor: pointer;
 }
 
+
 /*滚动条样式--ie*/
+
 body {
-    scrollbar-face-color: #014179; /*滚动条颜色*/
+    scrollbar-face-color: #014179;
+    /*滚动条颜色*/
     scrollbar-highlight-color: #014179;
     scrollbar-3dlight-color: #014179;
     scrollbar-darkshadow-color: #014179;
-    scrollbar-Shadow-color: #014179; /*滑块边色*/
-    scrollbar-arrow-color: #014179; /*箭头颜色*/
-    scrollbar-track-color: #fefefe; /*背景颜色*/
+    scrollbar-Shadow-color: #014179;
+    /*滑块边色*/
+    scrollbar-arrow-color: #014179;
+    /*箭头颜色*/
+    scrollbar-track-color: #fefefe;
+    /*背景颜色*/
 }
 
-html, body {
+html,
+body {
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     height: 100%;
     width: 100%;
@@ -98,9 +117,10 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 /*!* 侧边栏-默认 *!*/
-.layout-sidebar {
-}
+
+.layout-sidebar {}
 
 .layout-sidebar .layout-sidebar-content {
     padding: 5px 10px;
@@ -130,11 +150,13 @@ html, body {
     line-height: 26px;
 }
 
+
 /* 日食 深色主题 */
 
 #body-theme-mixiaoku {
     background-color: #1a2029;
 }
+
 
 /* 侧边栏 */
 
@@ -146,7 +168,9 @@ html, body {
     color: #325cd8;
 }
 
+
 /* 头部 */
+
 #body-theme-mixiaoku .layout-header {
     background-color: #151a20;
     box-shadow: none;
@@ -164,44 +188,98 @@ html, body {
     color: #549ef8;
 }
 
+
 /*!* border页面样式覆盖 *!*/
+
+
 /*#body-theme-mixiaoku .page-component .content > table {*/
+
+
 /*background-color: rgba(0, 0, 0, 0);*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .page-component .content > table td {*/
+
+
 /*color: #ffffff;*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .demo-border .line div {*/
+
+
 /*border-top: 1px solid #333a46;*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .demo-border .line .dashed {*/
+
+
 /*border-top: 2px dashed #333a46;*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .demo-radius .radius {*/
+
+
 /*border-color: #474e59;*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .page-border .demo-radius .radius {*/
+
+
 /*box-shadow: none;*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .demo-shadow {*/
+
+
 /*border: none;*/
+
+
 /*background-color: #2a3039;*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .demo-shadow.demo-shadow-normal {*/
+
+
 /*box-shadow: 0 5px 18px rgba(10, 15, 21, .32);*/
+
+
 /*}*/
+
 
 /*#body-theme-mixiaoku .demo-shadow-light {*/
+
+
 /*box-shadow: 0 5px 18px rgba(10, 15, 21, .15);*/
+
+
 /*}*/
 
+
 /*#body-theme-mixiaoku .demo-radius .value {*/
+
+
 /*color: #919bb1;*/
+
+
 /*}*/
