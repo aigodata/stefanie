@@ -1,6 +1,6 @@
 <template>
-    <div class="layout-sidebar">
-        <div class="layout-sidebar-content">
+    <div class="ai-layout-sidebar">
+        <div class="ai-layout-sidebar-content">
             <SidebarMenu v-if="navMenus.length" :data="navMenus" :parentPath="category" />
         </div>
     </div>
@@ -33,7 +33,7 @@
         watch: {
             category: function(){
                 this.init();
-            }  
+            }
         },
         components: {
             SidebarMenu

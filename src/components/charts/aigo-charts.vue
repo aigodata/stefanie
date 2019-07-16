@@ -50,37 +50,37 @@
     }
 </script>
 <style>
-    .layout-container .layout-content {}
+    .ai-layout-container .ai-layout-content {}
 
-    .layout-container .layout-content .ai-charts-container {
+    .ai-layout-container .ai-layout-content .ai-charts-container {
         width: 100%;
         height: 100%;
     }
 
-    .layout-container .layout-content .ai-charts-container .ai-charts-title {
+    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-title {
         display: block;
     }
 
-    .layout-container .layout-content .ai-charts-container .ai-charts-description {
+    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-description {
         display: block;
     }
 
-    .layout-container .layout-content .ai-charts-container .ai-charts-module {
+    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module {
         height: 100%;
     }
 
-    .layout-container .layout-content .ai-charts-container .ai-charts-module-content {
+    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module-content {
         width: 100%;
         height: 100%;
     }
 
-    .layout-container .layout-content .ai-charts-container .ai-charts-module-empty-content {
+    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module-empty-content {
         position: relative;
         width: 100%;
         height: 100%;
     }
 
-    .layout-container .layout-content .ai-charts-container .ai-charts-module-empty-content .ai-charts-module-no-data {
+    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module-empty-content .ai-charts-module-no-data {
         position: absolute;
         top: 50%;
         left: 50%;

@@ -1,6 +1,6 @@
 <template>
-    <div class="layout-header">
-        <div class="layout-header-content clearfix">
+    <div class="ai-layout-header">
+        <div class="ai-layout-header-content clearfix">
             <a href="//github.com/aigodata" class="logo" target="_blank">
                 <img src="../assets/images/logo-theme-chalk.svg" height="34"
                      v-show="$store.getters.theme === 'theme-chalk'">
@@ -100,50 +100,50 @@
 </script>
 
 <style>
-    .layout-header {
+    .ai-layout-header {
 
     }
 
-    .layout-header .layout-header-content {
+    .ai-layout-header .ai-layout-header-content {
 
     }
 
     /* logo */
 
-    .layout-header .logo {
+    .ai-layout-header .logo {
         margin-left: 15px;
         margin-right: 15px;
     }
 
-    .layout-header .logo img {
+    .ai-layout-header .logo img {
         position: relative;
         top: 9px;
     }
 
     /* 名称 */
 
-    .layout-header .title {
+    .ai-layout-header .title {
         padding: 0 10px;
         font-size: 20px;
         font-weight: 600;
         line-height: 60px;
     }
 
-    .layout-header .sub-title {
+    .ai-layout-header .sub-title {
         font-size: 16px;
         color: #333;
         line-height: 60px;
         padding-right: 20px;
     }
 
-    .layout-header .sub-title .version {
+    .ai-layout-header .sub-title .version {
         font-size: 14px;
         font-weight: 400;
         padding-left: 5px;
     }
 
     /* 主题 */
-    .layout-header .theme-nav {
+    .ai-layout-header .theme-nav {
         display: inline-block;
         width: 200px;
         float: right;
@@ -154,19 +154,19 @@
         margin: 0;
     }
 
-    .layout-header .theme-nav .theme-nav-item {
+    .ai-layout-header .theme-nav .theme-nav-item {
         float: left;
         padding: 0 10px;
         cursor: pointer;
     }
 
-    .layout-header .theme-nav .theme-nav-item:hover,
-    .layout-header .theme-nav .theme-nav-item.active {
+    .ai-layout-header .theme-nav .theme-nav-item:hover,
+    .ai-layout-header .theme-nav .theme-nav-item.active {
         color: #549ef8;
     }
 
     /* github */
-    .layout-header .github-logo {
+    .ai-layout-header .github-logo {
         position: absolute;
         top: 15px;
         right: 20px;

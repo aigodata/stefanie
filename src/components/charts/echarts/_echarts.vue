@@ -1,6 +1,6 @@
 <template>
   <div class="ai-charts-module" :class="currentTheme">
-    <div class="ai-charts-module-content" ref="customCharts" v-show="!isEmptyData"></div>
+    <div class="ai-charts-module-content" ref="aiCustomCharts" v-show="!isEmptyData"></div>
     <div class="ai-charts-module-empty-content" v-show="isEmptyData">
       {{tipsStatus}}
     </div>
@@ -47,7 +47,8 @@ export default {
     init () {
       // 图表实例校验
       if (!this.chart) {
-        let el = this.$refs.customCharts;
+        let el = this.$refs.aiCustomCharts;
+        console.log(el);
         el && (this.chart = echarts.init(el));
       }
 
@@ -72,7 +73,6 @@ export default {
     },
     // 图表绘制
     draw (options) {
-      console.log('dddd===', options);
       this.chart.setOption(options || {});
     },
     // 监听窗口大小改变
