@@ -1,5 +1,5 @@
 <template>
-    <!-- 组件名称 -->
+    <!-- 单选按钮 | 可支持键盘空格按钮 -->
     <div class="ai-radio" :class="theme">
         <label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
             <input type="radio" name="name || 'radio_' + radioVal" :disabled="disabled" :checked="label == model ? 'true' : ''"
@@ -9,10 +9,10 @@
     </div>
 </template>
 <script>
-    import Parent from '@/components/basic/basic';
+    import parent from '@/components/basic/basic';
 
     export default {
-        extends: Parent,
+        extends: parent,
         name: 'ai-radio',
         props: {
             label: {
