@@ -1,10 +1,10 @@
 export class CustomHandle {
     constructor(data, config) {
-            this.data = data || [];
-            this.config = config || {};
-            this.option = {};
-        }
-        // 初始化
+        this.data = data || [];
+        this.config = config || {};
+        this.option = {};
+    };
+    // 初始化
     init() {
         this.setTitle();
         this.setLegend();
