@@ -1,6 +1,6 @@
 <template>
     <!-- 组件名称 -->
-    <div class="ai-radio" :class="[theme ? 'theme-' + theme : '']">
+    <div class="ai-radio" :class="theme">
         <label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
             <input type="radio" name="name || 'radio_' + radioVal" :disabled="disabled" :checked="label == model ? 'true' : ''"
                 @change="change" />
@@ -9,7 +9,7 @@
     </div>
 </template>
 <script>
-    import Parent from './../basic';
+    import Parent from '@/components/basic/basic';
 
     export default {
         extends: Parent,
@@ -49,14 +49,13 @@
     .ai-radio {
         display: inline-block;
     }
-
     /**
     * -------------------  白垩纪 主题 样式
     */
-    .ai-radio.theme-chalk {}
+    .ai-radio .theme-chalk {}
 
     /**
     * -------------------  日食 主题 样式
     */
-    .ai-radio.theme-mixiaoku {}
+    .ai-radio .theme-mixiaoku {}
 </style>
