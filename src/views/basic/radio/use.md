@@ -7,6 +7,13 @@
 |disabled|是否禁用|boolean|false|false|-|
 |name|原生 name 属性|string|false|-|-|
 |loading|加载状态|boolean|false|false|-|
+|options|配置选项,具体看下表|object|-|-|
+
+#### options ####
+|参数|说明|类型|默认值|可选值|
+|:-|:-:|:-:|:-:|-:|
+|label|指定节点标签为节点对象的某个属性值|string|-|-|
+|children|指定子节点对象的某个属性值|string|-|-|
 
 #### Radio Events ####
 

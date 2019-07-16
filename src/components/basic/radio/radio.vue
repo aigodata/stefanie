@@ -20,6 +20,9 @@
                 default: ''
             }
         },
+        data() {
+            return {}
+        },
         computed: {
             model: {
                 get() {
@@ -29,26 +32,44 @@
                 }
             }
         },
+        watch: {
+
+        },
+        // 组件方法实例
         methods: {
+            // 标签切换,触发input事件并返回新值 v-model
             change() {
                 this.$emit('input', this.label);
             },
             clear() {
 
             },
+            // 页面初始化加载 
             load() {
+                // 初始化
                 this.model = this.value !== 'undefined' ? this.value : '';
             }
         },
+        // DOM渲染完毕
         mounted() {
             this.load();
+        },
+        // 组件销毁
+        destroyed() {
+
         }
     }
 </script>
 <style>
     .ai-radio {
         display: inline-block;
+        margin-right: 15px;
     }
+
+    .ai-radio:last-child {
+        margin-right: 0;
+    }
+
     /**
     * -------------------  白垩纪 主题 样式
     */
