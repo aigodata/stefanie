@@ -27,18 +27,31 @@
 			disabled: {
 				type: Boolean,
 				default: false
+            },
+            /**
+             * 默认参数的书写位置
+             *     可以配置样式变量
+             *     可以配置组件的默认配置
+             */
+            options: {
+			    type: Object,
+                default: function() {
+                    return {
+                        xxx: 'xxx'
+                    }
+                }
             }
 		},
 		computed: {
 			// 重新组装、合并 props 数据 --> 不能删除!!!
-			customConfig: function() {
-				// 当前类 props.options 属性
-				let c = this.$options.__proto__.props.options.default();
-				// 父类 props.options 属性
-				let p = this.$options.extends.props.options.default();
-				// 自定义属性 与 当前类 props 、父类 props 合并
-				return Object.assign(p, c, this.options);
-			},
+            customConfig: function() {
+                // 当前类 props.options 属性
+                let c = this.$options.__proto__.props.options.default();
+                // 父类 props.options 属性
+                let p = this.$options.extends.props.options.default();
+                // 自定义属性 与 当前类 props 、父类 props 合并
+                return Object.assign(p, c, this.options);
+            },
 			model: {
 				get() {
 					return typeof this.value !== "undefined" ? this.value : "";
