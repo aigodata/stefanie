@@ -1,10 +1,10 @@
 export class CustomHandle {
     constructor(data, config) {
-        this.data = data || [];
-        this.config = config || {};
-        this.option = {};
-    }
-    // 初始化
+            this.data = data || [];
+            this.config = config || {};
+            this.option = {};
+        }
+        // 初始化
     init() {
         this.setTitle();
         this.setLegend();
@@ -16,7 +16,7 @@ export class CustomHandle {
     };
     // 配置标题
     setTitle() {
-        // 详见 https://echarts.baidu.com/option.html#title  
+        // 详见 https://echarts.baidu.com/option.html#title
         let title = {
             text: '我是一个折线图',
             top: '15',
@@ -40,7 +40,7 @@ export class CustomHandle {
         })
         this.option.legend = legend;
     };
-    // 
+    //
     setGrid() {
         // 详见 https://echarts.baidu.com/option.html#grid
         let grid = {
@@ -64,19 +64,19 @@ export class CustomHandle {
                     backgroundColor: '#6a7985'
                 }
             },
-            formatter: function (params, ticket, callback) {
+            formatter: function(params, ticket, callback) {
                 let title = params[0].axisValueLabel || '';
                 let labels = '';
                 params.forEach(item => {
-                    labels += '<div class="tooltip-content">'
-                        + '<span class="tooltip-label">' + _this.data[item.seriesIndex].name + '</span>'
-                        + '<span class="tooltip-value">' + item.data + '</span>'
-                        + '</div>';
+                    labels += '<div class="tooltip-content">' +
+                        '<span class="tooltip-label">' + _this.data[item.seriesIndex].name + '</span>' +
+                        '<span class="tooltip-value">' + item.data + '</span>' +
+                        '</div>';
                 })
-                return '<div class="charts-tooltip-container">'
-                    + '<span class="tooltip-title">' + title + '</span>'
-                    + labels
-                    + '</div>';
+                return '<div class="charts-tooltip-container">' +
+                    '<span class="tooltip-title">' + title + '</span>' +
+                    labels +
+                    '</div>';
             }
         };;
     };
