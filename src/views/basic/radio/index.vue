@@ -23,11 +23,15 @@
 		<div class="component-use">
 			<markdown-run :mark="useMD"></markdown-run>
 		</div>
+		<div class="component-use">
+			<markdown-run :mark="globalMD"></markdown-run>
+		</div>
 	</div>
 </template>
 <script>
 	import ExampleMD from "!text-loader!./example/example.md";
 	import UseMD from "!text-loader!./use.md";
+	import GlobalMD from "!text-loader!./../basic-use.md";
 
 	export default {
 		props: {},
@@ -37,6 +41,7 @@
 			return {
 				exampleMD: ExampleMD,
 				useMD: UseMD,
+				globalMD: GlobalMD,
 				radio: 2
 			};
 		},

@@ -27,7 +27,7 @@
 			disabled: {
 				type: Boolean,
 				default: false
-			}
+            }
 		},
 		computed: {
 			// 重新组装、合并 props 数据 --> 不能删除!!!
@@ -57,7 +57,7 @@
 			clear() {},
 			load() {
 				// 初始化
-				this.model = this.value !== "undefined" ? this.value : "";
+                this.model = this.value !== "undefined" ? this.value : "";
 			}
 		},
 		mounted() {
