@@ -1,4 +1,3 @@
-<!-- 不要随意修改... 必须知会 田明 || 张雪原 !!! -->
 <script>
     export default {
         props: {
@@ -37,5 +36,9 @@
         data() {
             return {}
         }
+    },
+    data () {
+        return {};
     }
+};
 </script>
