@@ -1,14 +1,14 @@
 <template>
 	<!-- 统计展示 -->
-	<div class="ai-statistics" :class="className">
+	<div class="ai-statistics" :class="options.className">
 		<div class="ai-icon">
 			<i :class="icon"></i>
 		</div>
 		<div class="ai-label">
-			<span>{{label}}</span>
+			<span>{{ label }}</span>
 		</div>
 		<div class="ai-data">
-			<span>{{data}}</span>
+			<span>{{ data }}</span>
 		</div>
 	</div>
 </template>
@@ -32,16 +32,18 @@
 				default: "el-icon-info"
 			}
 		},
+		computed: {},
+		watch: {},
 		data () {
 			return {};
 		},
-		computed: {},
-		watch: {},
-		// 组件方法实例
-		methods: {},
-		// DOM渲染完毕
-		mounted () { },
-		// 组件销毁
+		methods: {
+			clear () { },
+			load () { }
+		},
+		mounted () {
+			this.load();
+		},
 		destroyed () { }
 	};
 </script>
@@ -105,14 +107,20 @@
 		height: 150px;
 	}
 	/**
-	    * -------------------  白垩纪 主题 样式
-	    */
+	<<<<<<< HEAD
+		    * -------------------  白垩纪 主题 样式
+		    */
 	.ai-statistics .theme-chalk {
 	}
 
 	/**
-	    * -------------------  日食 主题 样式
-	    */
-	.ai-statistics .theme-mixiaoku {
+		    * -------------------  日食 主题 样式
+		    */
+	======= * ------------------- 白垩纪 主题 样式 */ .ai-statistics .theme-chalk {
+	}
+	/**
+				          * -------------------  日食 主题 样式
+				          */
+	>>>>>>>8429bb09dbf760b2a036d7c835fcd225659b1c85 .ai-statistics .theme-mixiaoku {
 	}
 </style>
