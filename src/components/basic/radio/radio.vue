@@ -32,8 +32,11 @@
 		computed: {
 			// 重新组装、合并 props 数据 --> 不能删除!!!
 			customConfig: function() {
+				// 当前类 props.options 属性
 				let c = this.$options.__proto__.props.options.default();
+				// 父类 props.options 属性
 				let p = this.$options.extends.props.options.default();
+				// 自定义属性 与 当前类 props 、父类 props 合并
 				return Object.assign(p, c, this.options);
 			},
 			model: {

@@ -34,9 +34,11 @@
 			}
 		},
 		computed: {
-            // 重新组装、合并 props 数据
+            // 重新组装、合并 props 数据 --> 不能删除!!!
 			customConfig: function() {
+				// 当前类 props.options 默认属性
 				let t = this.$options.__proto__.props.options.default();
+				// 自定义属性 与 默认属性 合并
 				return Object.assign(t, this.options);
 			}
 		}
