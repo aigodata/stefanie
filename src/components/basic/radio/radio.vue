@@ -2,7 +2,7 @@
     <!-- 单选按钮 (组件名称) | 可支持键盘空格按钮 (组件描述) -->
     <div class="ai-radio" :class="[theme,options.className]">
         <label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
-            <input type="radio" name="name || 'radio_' + radioVal" :disabled="disabled" :checked="label == model ? 'true' : ''"
+            <input type="radio" name="name || 'radio_' + radioVal"  :checked="label == model ? 'true' : ''"
                 @change="change" />
             <slot></slot>
         </label>

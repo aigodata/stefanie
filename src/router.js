@@ -33,10 +33,10 @@ let children = [{
                     import ('@/views/basic/radio/index'),
             },
             {
-                path: 'statistics',
-                meta: { name: 'statistics 统计' },
+                path: 'statistic',
+                meta: { name: 'statistic 统计' },
                 component: () =>
-                    import ('@/views/basic/statistics/index'),
+                    import ('@/views/basic/statistic/index'),
             }
         ]
     },
