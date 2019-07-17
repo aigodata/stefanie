@@ -41,7 +41,9 @@
 			clear() {},
 			load() {}
 		},
-		mounted() {},
+		mounted() {
+			this.load();
+		},
 		destroyed() {}
 	};
 </script>
@@ -105,13 +107,13 @@
 		height: 150px;
 	}
 	/**
-			          * -------------------  白垩纪 主题 样式
-			          */
+				          * -------------------  白垩纪 主题 样式
+				          */
 	.ai-statistics .theme-chalk {
 	}
 	/**
-			          * -------------------  日食 主题 样式
-			          */
+				          * -------------------  日食 主题 样式
+				          */
 	.ai-statistics .theme-mixiaoku {
 	}
 </style>
