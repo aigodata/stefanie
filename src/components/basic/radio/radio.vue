@@ -1,6 +1,6 @@
 <template>
-    <!-- 单选按钮 | 可支持键盘空格按钮 -->
-    <div class="ai-radio" :class="theme">
+    <!-- 单选按钮 (组件名称) | 可支持键盘空格按钮 (组件描述) -->
+    <div class="ai-radio" :class="[theme,options.className]">
         <label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
             <input type="radio" name="name || 'radio_' + radioVal" :disabled="disabled" :checked="label == model ? 'true' : ''"
                 @change="change" />
@@ -20,9 +20,6 @@
                 default: ''
             }
         },
-        data() {
-            return {}
-        },
         computed: {
             model: {
                 get() {
@@ -32,32 +29,24 @@
                 }
             }
         },
-        watch: {
-
+        watch: {},
+        data() {
+            return {}
         },
-        // 组件方法实例
         methods: {
-            // 标签切换,触发input事件并返回新值 v-model
             change() {
                 this.$emit('input', this.label);
             },
-            clear() {
-
-            },
-            // 页面初始化加载 
+            clear() { },
             load() {
                 // 初始化
                 this.model = this.value !== 'undefined' ? this.value : '';
             }
         },
-        // DOM渲染完毕
         mounted() {
             this.load();
         },
-        // 组件销毁
-        destroyed() {
-
-        }
+        destroyed() { }
     }
 </script>
 <style>

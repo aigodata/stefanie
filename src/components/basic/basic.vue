@@ -7,11 +7,6 @@
                 type: [Boolean, Number, String],
                 default: '',
             },
-            // 是否禁用
-            disabled: {
-                type: Boolean,
-                default: false
-            },
             // 加载状态
             loading: {
                 type: Boolean,
@@ -28,23 +23,19 @@
             },
             /**
              * 选项配置
-             * label -> 指定节点标签为节点对象的某个属性值
-             * children -> 指定子节点对象的某个属性值
+             * customClass -> 自定义样式名字
              */
             options: {
                 type: Object,
-                default: function () {
+                default: function (data) {
                     return {
-                        label: 'label',
-                        children: 'children',
-                        className: ''
+                        customClass: '',
                     }
                 }
             }
         },
         data() {
-            return {
-            }
+            return {}
         }
     }
 </script>
