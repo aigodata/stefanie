@@ -153,7 +153,6 @@
 	}
 	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border img {
 		width: 30px;
-		height: 30px;
 	}
 	.ai-statistic
 		.ai-statistic-icon

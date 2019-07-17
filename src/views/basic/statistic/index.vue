@@ -20,9 +20,12 @@
 						</div>
 					</div>
 					<div>
-						<div class="title">自定义颜色</div>
+						<div class="title">自定义颜色/自定义图片</div>
 						<ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
 							<i class="el-icon-s-tools"></i>
+						</ai-statistic>
+                        <ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
+							<img src="../../../assets/images/aigo.jpg" />
 						</ai-statistic>
 						<div class="example">
 							<markdown-run :mark="CustomColor"></markdown-run>
