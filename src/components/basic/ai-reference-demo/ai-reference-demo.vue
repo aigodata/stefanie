@@ -1,6 +1,6 @@
 <template>
 	<!-- 单选按钮 (组件名称) | 可支持键盘空格按钮 (组件描述) -->
-	<div class="ai-radio" :class="[theme,customConfig.customClass]">
+	<div class="ai-reference-demo" :class="[theme, customConfig.customClass]">
 		<label role="radio" @keydown.space.stop.prevent="model = isDisabled ? model : label">
 			<input
 				type="radio"
@@ -14,11 +14,11 @@
 	</div>
 </template>
 <script>
-	import parent from "@/components/basic/basic";
+	import parent from "@/components/basic";
 
 	export default {
 		extends: parent,
-		name: "ai-radio",
+		name: "ai-reference-demo",
 		props: {
 			label: {
 				type: [String, Number, Boolean],
@@ -85,23 +85,23 @@
 </script>
 <style>
 
-	.ai-radio {
+	.ai-reference-demo {
 		display: inline-block;
 		margin-right: 15px;
 	}
 
-	.ai-radio:last-child {
+	.ai-reference-demo:last-child {
 		margin-right: 0;
 	}
 
 	/* 白垩纪 主题 样式 */
-	.ai-radio.theme-chalk {
+	.ai-reference-demo.theme-chalk {
 
         /* 关于颜色的样式写在这里 */
 	}
 
 	/* 日食 主题 样式 */
-	.ai-radio.theme-mixiaoku {
+	.ai-reference-demo.theme-mixiaoku {
 
         /* 关于颜色的样式写在这里 */
 	}

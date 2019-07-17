@@ -1,7 +1,7 @@
 <template>
 	<!-- 组件示例 -->
 	<div class="component-container">
-		<span class="component-title">Reference Demo</span>
+		<span class="component-title">单选按钮</span>
 		<p class="component-description">在一组备选项中进行单选</p>
 		<!-- 示例 -->
 		<div class="component-example">
@@ -10,8 +10,8 @@
 			<div class="component-example-content">
 				<!-- 组件使用 -->
 				<div class="source">
-					<ai-radio v-model="radio" label="1">选择一</ai-radio>
-					<ai-radio v-model="radio" label="2">选择二</ai-radio>
+					<ai-reference-demo v-model="radio" label="1">选择一</ai-reference-demo>
+					<ai-reference-demo v-model="radio" label="2">选择二</ai-reference-demo>
 				</div>
 				<!-- 代码参考 -->
 				<div class="example">

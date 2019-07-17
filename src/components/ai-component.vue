@@ -1,4 +1,8 @@
 <template>
+    <!--
+        动态组件
+            这个组件的意义很大, 可以动态灵活的切换组件, 不只是图表, 组件也需要一起切换
+    -->
     <component :is="currentComponent" :data="data" :config="config" :theme="theme"></component>
 </template>
 <script>
@@ -49,41 +53,3 @@
         }
     }
 </script>
-<style>
-    .ai-layout-container .ai-layout-content {}
-
-    .ai-layout-container .ai-layout-content .ai-charts-container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-title {
-        display: block;
-    }
-
-    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-description {
-        display: block;
-    }
-
-    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module {
-        height: 100%;
-    }
-
-    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module-content {
-        width: 100%;
-        height: 100%;
-    }
-
-    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module-empty-content {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .ai-layout-container .ai-layout-content .ai-charts-container .ai-charts-module-empty-content .ai-charts-module-no-data {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-</style>

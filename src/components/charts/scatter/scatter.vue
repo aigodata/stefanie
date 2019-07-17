@@ -1,5 +1,5 @@
 <script>
-import ParentCharts from './../_echarts';
+import ParentCharts from '../../_echarts';
 import { CustomHandle } from './proces.js';
 export default {
   extends: ParentCharts,
