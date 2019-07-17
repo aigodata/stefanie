@@ -26,15 +26,19 @@
 			 */
 			options: {
 				type: Object,
-				default: function(data) {
+				default: function() {
 					return {
 						customClass: ""
 					};
 				}
 			}
 		},
-		data() {
-			return {};
+		computed: {
+			customConfig: function() {
+				// 重新组装、合并 props 数据
+				let t = this.$options.__proto__.props.options.default() || {};
+				return Object.assign(t, this.options);
+			}
 		}
 	};
 </script>

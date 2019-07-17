@@ -10,16 +10,41 @@
 			<div class="component-example-content">
 				<!-- 组件使用 -->
 				<div class="source">
-					<ai-statistic v-model="value" :options="options" label="资产总值">
+					<ai-statistic v-model="value" :options="options" color="green" label="资产总值">
 						<i class="el-icon-s-tools"></i>
 					</ai-statistic>
-					<ai-statistic v-model="value" :options="options2" label="收入总值">
-						<img src="../../../assets/images/logo-theme-chalk.svg" />
+					<ai-statistic v-model="value" :options="options1" color="green" label="资产总值">
+						<i class="el-icon-s-tools"></i>
 					</ai-statistic>
-					<div>
-						<ai-statistic v-for="item in statisticArray" v-model="item.value" :options="item.options" :label="item.label" :key="item.key">
+					<ai-statistic v-model="value" :options="options1" type="warning" label="资产总值">
+						<i class="el-icon-s-tools"></i>
+					</ai-statistic>
+					<ai-statistic v-model="value" :options="options2" fill type="warning" label="收入总值">
+						<i class="el-icon-s-tools"></i>
+					</ai-statistic>
+					<ai-statistic v-model="value" :options="options2" fill label="收入总值">
+						<i class="el-icon-s-tools"></i>
+					</ai-statistic>
+					<div class="horizonta">
+						<ai-statistic v-model="value" horizonta :options="options2" fill="red" label="收入总值">
 							<i class="el-icon-s-tools"></i>
 						</ai-statistic>
+						<ai-statistic v-model="value" horizonta :options="options2" fill="green" label="收入总值">
+							<i class="el-icon-s-tools"></i>
+						</ai-statistic>
+					</div>
+
+					<div>
+						<ai-statistic v-model="value" :options="options2" fill type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options2" fill type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options2" fill type="primary" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options2" fill type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+					</div>
+					<div>
+						<ai-statistic v-model="value" :options="options2" type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options2" type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options2" type="primary" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options2" type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
 					</div>
 				</div>
 				<!-- 代码参考 -->
@@ -44,13 +69,21 @@
 			return {
 				exampleMD: ExampleMD,
 				useMD: UseMD,
-				value: 100000,
+				value: 1000,
 				options: {
 					customClass: '',
 					unit: '元',
 					isSymbol: ',',
 					icon: {
-						isIcon: true
+						isIcon: false
+					}
+				},
+				options1: {
+					customClass: '',
+					unit: '元',
+					isSymbol: ',',
+					icon: {
+						isIcon: true,
 					}
 				},
 				options2: {
@@ -58,25 +91,8 @@
 					unit: '元',
 					icon: {
 						isIcon: true,
-                        iconType: 'is-fill',
-                        color:'red'
 					}
 				},
-				statisticArray: [
-					{
-						label: '资产总值',
-						options: {
-							customClass: '',
-							unit: '元',
-							icon: {
-								isIcon: true,
-								iconType: 'is-fill'
-							}
-						},
-						value: 100,
-						key: 1
-					},
-				]
 			};
 		},
 		computed: {},
@@ -85,3 +101,8 @@
 		mounted () { }
 	};
 </script>
+<style >
+    .horizonta{
+        width:400px;
+    }
+</style>
