@@ -210,6 +210,11 @@ body {
     border: 1px solid #ebebeb;
 }
 
+.ai-layout-container .ai-layout-content .component-container .component-example .component-example-content .source .title {
+    color: #333;
+    font-size: 14px;
+}
+
 .ai-layout-container .ai-layout-content .component-container .component-example .component-example-content .example {}
 
 .ai-layout-container .ai-layout-content .component-container .component-use {}
