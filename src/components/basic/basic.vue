@@ -34,9 +34,9 @@
 			}
 		},
 		computed: {
+            // 重新组装、合并 props 数据
 			customConfig: function() {
-				// 重新组装、合并 props 数据
-				let t = this.$options.__proto__.props.options.default() || {};
+				let t = this.$options.__proto__.props.options.default();
 				return Object.assign(t, this.options);
 			}
 		}

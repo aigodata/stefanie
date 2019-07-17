@@ -30,6 +30,12 @@
 			}
 		},
 		computed: {
+			// 重新组装、合并 props 数据 --> 不能删除!!!
+			customConfig: function() {
+				let c = this.$options.__proto__.props.options.default();
+				let p = this.$options.extends.props.options.default();
+				return Object.assign(p, c, this.options);
+			},
 			model: {
 				get() {
 					return typeof this.value !== "undefined" ? this.value : "";
