@@ -1,7 +1,7 @@
 <template>
 	<!-- 组件示例 -->
 	<div class="component-container">
-		<span class="component-title">Radio 单选框</span>
+		<span class="component-title">Reference Demo</span>
 		<p class="component-description">在一组备选项中进行单选</p>
 		<!-- 示例 -->
 		<div class="component-example">
