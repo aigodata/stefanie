@@ -67,30 +67,42 @@
 			change() {
 				this.$emit("input", this.label);
 			},
-			clear() {},
+			clear() {
+			    // 这里用于移除变量, 清除缓存, 释放闭包
+            },
 			load() {
 				// 初始化
                 this.model = this.value !== "undefined" ? this.value : "";
 			}
 		},
 		mounted() {
-			this.load();
+			this.load()
 		},
-		destroyed() {}
+		destroyed() {
+		    this.clear()
+        }
 	};
 </script>
 <style>
+
 	.ai-radio {
 		display: inline-block;
 		margin-right: 15px;
 	}
+
 	.ai-radio:last-child {
 		margin-right: 0;
 	}
+
 	/* 白垩纪 主题 样式 */
-	.ai-radio .theme-chalk {
+	.ai-radio.theme-chalk {
+
+        /* 关于颜色的样式写在这里 */
 	}
+
 	/* 日食 主题 样式 */
-	.ai-radio .theme-mixiaoku {
+	.ai-radio.theme-mixiaoku {
+
+        /* 关于颜色的样式写在这里 */
 	}
 </style>
