@@ -29,7 +29,6 @@
 				default: false
 			}
 		},
-		watch: {},
 		computed: {
 			model: {
 				get() {
@@ -38,6 +37,7 @@
 				set() {}
 			}
 		},
+		watch: {},
 		data() {
 			return {};
 		},
