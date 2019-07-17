@@ -26,7 +26,7 @@
 	</div>
 </template>
 <script>
-	import parent from "@/components/basic";
+	import parent from "@/components/parent/basic";
 	export default {
 		extends: parent,
 		name: "ai-statistic",
