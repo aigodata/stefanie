@@ -1,14 +1,14 @@
 <template>
 	<!-- 统计数字|用于展示数字数据 -->
-	<div class="ai-statistic"  :class="`${customConfig.customClass} ${horizonta?'ai-statistic-horizonta':''}`">
+	<div class="ai-statistic" :class="`${customConfig.customClass} ${horizonta?'ai-statistic-horizonta':''}`">
 		<div class="ai-statistic-inner" :class="`${theme} `">
 			<!-- icon展示 -->
-			<div v-if="fill&&customConfig.icon.isIcon" class="ai-statistic-icon is-fill">
+			<div v-if="fill&&icon" class="ai-statistic-icon is-fill">
 				<div class="ai-statistic-icon-border" :class="`${type?type:''}`" :style="color?`background:${color};border:2px solid ${color}`:''">
 					<slot></slot>
 				</div>
 			</div>
-			<div v-else-if="customConfig.icon.isIcon" class="ai-statistic-icon">
+			<div v-else-if="icon" class="ai-statistic-icon">
 				<div class="ai-statistic-icon-border" :class="`${type?type:''}`" :style="color?`background:#fff;border:2px solid ${color};color:${color}`:''">
 					<slot></slot>
 				</div>
@@ -43,7 +43,8 @@
 				fill: false,
 				color: '',
 				type: '',
-				horizonta: false
+				horizonta: false,
+				icon: false
 			};
 		},
 		methods: {
@@ -64,7 +65,8 @@
 				'fill' in this.$attrs && this.$attrs.fill ? this.color = this.$attrs.fill : null;
 				'type' in this.$attrs && this.$attrs.type ? this.type = this.$attrs.type : null;
 				'color' in this.$attrs && this.$attrs.color ? this.color = this.$attrs.color : null;
-				'horizonta' in this.$attrs ? this.horizonta = true : null
+				'horizonta' in this.$attrs ? this.horizonta = true : null;
+				'icon' in this.$attrs ? this.icon = true : null;
 			}
 		},
 		mounted () {
@@ -80,9 +82,9 @@
 		margin: 10px;
 		box-shadow: 0px 3px 13px 0px rgba(110, 127, 136, 0.1);
 	}
-    .ai-statistic-horizonta{
-        display: block;
-    }
+	.ai-statistic-horizonta {
+		display: block;
+	}
 	.ai-statistic .ai-statistic-inner {
 		padding: 20px;
 		overflow: hidden;

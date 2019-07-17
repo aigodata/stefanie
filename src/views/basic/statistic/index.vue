@@ -10,41 +10,64 @@
 			<div class="component-example-content">
 				<!-- 组件使用 -->
 				<div class="source">
-					<ai-statistic v-model="value" :options="options" color="green" label="资产总值">
-						<i class="el-icon-s-tools"></i>
-					</ai-statistic>
-					<ai-statistic v-model="value" :options="options1" color="green" label="资产总值">
-						<i class="el-icon-s-tools"></i>
-					</ai-statistic>
-					<ai-statistic v-model="value" :options="options1" type="warning" label="资产总值">
-						<i class="el-icon-s-tools"></i>
-					</ai-statistic>
-					<ai-statistic v-model="value" :options="options2" fill type="warning" label="收入总值">
-						<i class="el-icon-s-tools"></i>
-					</ai-statistic>
-					<ai-statistic v-model="value" :options="options2" fill label="收入总值">
-						<i class="el-icon-s-tools"></i>
-					</ai-statistic>
+					<div>
+						<div class="title">不带Icon样式</div>
+						<ai-statistic v-model="value" :options="options" color="green" label="资产总值">
+							<i class="el-icon-s-tools"></i>
+						</ai-statistic>
+						<div class="example">
+							<markdown-run :mark="NoIcon"></markdown-run>
+						</div>
+					</div>
+					<div>
+						<div class="title">自定义颜色</div>
+						<ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
+							<i class="el-icon-s-tools"></i>
+						</ai-statistic>
+						<div class="example">
+							<markdown-run :mark="CustomColor"></markdown-run>
+						</div>
+					</div>
+					<div>
+						<div class="title">填充自定义颜色</div>
+						<ai-statistic v-model="value" icon :options="options" fill="green" label="收入总值">
+							<i class="el-icon-s-tools"></i>
+						</ai-statistic>
+						<div class="example">
+							<markdown-run :mark="FillCustomColor"></markdown-run>
+						</div>
+					</div>
+					<div>
+						<div class="title">填充带类型样式</div>
+						<ai-statistic v-model="value" :options="options" fill icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options" fill icon type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options" fill icon type="primary" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options" fill icon type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<div class="example">
+							<markdown-run :mark="FillType"></markdown-run>
+						</div>
+					</div>
+					<div>
+						<div class="title">非填充带类型样式</div>
+						<ai-statistic v-model="value" :options="options" icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options" icon type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options" icon type="primary" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<ai-statistic v-model="value" :options="options" icon type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+						<div class="example">
+							<markdown-run :mark="NoFillType"></markdown-run>
+						</div>
+					</div>
 					<div class="horizonta">
-						<ai-statistic v-model="value" horizonta :options="options2" fill="red" label="收入总值">
+						<div class="title">横向展示</div>
+						<ai-statistic v-model="value" horizonta :options="options" icon fill="red" label="收入总值">
 							<i class="el-icon-s-tools"></i>
 						</ai-statistic>
-						<ai-statistic v-model="value" horizonta :options="options2" fill="green" label="收入总值">
+						<ai-statistic v-model="value" horizonta :options="options" icon fill label="收入总值">
 							<i class="el-icon-s-tools"></i>
 						</ai-statistic>
 					</div>
-
-					<div>
-						<ai-statistic v-model="value" :options="options2" fill type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-						<ai-statistic v-model="value" :options="options2" fill type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-						<ai-statistic v-model="value" :options="options2" fill type="primary" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-						<ai-statistic v-model="value" :options="options2" fill type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-					</div>
-					<div>
-						<ai-statistic v-model="value" :options="options2" type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-						<ai-statistic v-model="value" :options="options2" type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-						<ai-statistic v-model="value" :options="options2" type="primary" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
-						<ai-statistic v-model="value" :options="options2" type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+					<div class="example">
+						<markdown-run :mark="Horizonta"></markdown-run>
 					</div>
 				</div>
 				<!-- 代码参考 -->
@@ -61,6 +84,12 @@
 </template>
 <script>
 	import ExampleMD from "!text-loader!./example/example.md";
+	import NoIcon from "!text-loader!./example/noIcon.md";
+	import CustomColor from "!text-loader!./example/customColor.md";
+	import FillCustomColor from "!text-loader!./example/fillCustomColor.md";
+	import FillType from "!text-loader!./example/fillType.md";
+	import NoFillType from "!text-loader!./example/noFillType.md";
+	import Horizonta from "!text-loader!./example/horizonta.md";
 	import UseMD from "!text-loader!./use.md";
 
 	export default {
@@ -68,30 +97,18 @@
 		data () {
 			return {
 				exampleMD: ExampleMD,
+				NoIcon: NoIcon,
+				CustomColor: CustomColor,
+				FillCustomColor: FillCustomColor,
+				FillType: FillType,
+				NoFillType: NoFillType,
+				Horizonta: Horizonta,
 				useMD: UseMD,
 				value: 1000,
 				options: {
 					customClass: '',
 					unit: '元',
 					isSymbol: ',',
-					icon: {
-						isIcon: false
-					}
-				},
-				options1: {
-					customClass: '',
-					unit: '元',
-					isSymbol: ',',
-					icon: {
-						isIcon: true,
-					}
-				},
-				options2: {
-					customClass: '',
-					unit: '元',
-					icon: {
-						isIcon: true,
-					}
 				},
 			};
 		},
@@ -102,7 +119,7 @@
 	};
 </script>
 <style >
-    .horizonta{
-        width:400px;
-    }
+	.horizonta {
+		width: 400px;
+	}
 </style>
