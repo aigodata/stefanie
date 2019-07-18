@@ -1,7 +1,7 @@
 ````html
 <el-row>
     <el-col :span="6">
-        <ai-statistic v-model="value" :options="options" fill icon type="warning" label="收入总值">
+        <ai-statistic v-model="value" :options="options" theme='theme-mixiaoku' fill icon type="warning" label="收入总值">
             <i class="el-icon-s-tools"></i>
         </ai-statistic>
     </el-col>

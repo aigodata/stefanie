@@ -11,6 +11,7 @@
 				<!-- 组件使用 -->
 				<div class="source">
 					<div class="title">无Icon样式</div>
+					<!-- 应用实例 -->
 					<el-row>
 						<el-col :span="6">
 							<ai-statistic v-model="value" :options="options" label="资产总值">
@@ -18,22 +19,32 @@
 							</ai-statistic>
 						</el-col>
 					</el-row>
+					<!-- 代码参考 -->
 					<div class="example">
-						<markdown-run :mark="ExampleMD"></markdown-run>
+						<markdown-run :mark="ExampleMD" highlight-style-file-name="github"></markdown-run>
 					</div>
 					<div class="title">填充默认颜色样式</div>
+					<!-- 应用实例 -->
 					<el-row>
 						<el-col :span="6">
-							<ai-statistic v-model="value"  :options="options" icon fill label="资产总值">
+							<ai-statistic v-model="value" :options="options" icon fill label="资产总值">
+								<i class="el-icon-s-tools"></i>
+							</ai-statistic>
+
+						</el-col>
+						<el-col :span="6">
+							<ai-statistic v-model="value" :options="options" theme='theme-mixiaoku' icon label="资产总值">
 								<i class="el-icon-s-tools"></i>
 							</ai-statistic>
 						</el-col>
 					</el-row>
+					<!-- 代码参考 -->
 					<div class="example">
-						<markdown-run :mark="Example1"></markdown-run>
+						<markdown-run :mark="Example1" highlight-style-file-name="github"></markdown-run>
 					</div>
 					<div>
 						<div class="title">填充自定义颜色/图片</div>
+						<!-- 应用实例 -->
 						<el-row>
 							<el-col :span="6">
 								<ai-statistic v-model="value" icon :options="options" label="资产总值">
@@ -48,11 +59,13 @@
 						</el-row>
 
 					</div>
+					<!-- 代码参考 -->
 					<div class="example">
-						<markdown-run :mark="Example2"></markdown-run>
+						<markdown-run :mark="Example2" highlight-style-file-name="github"></markdown-run>
 					</div>
 					<div>
 						<div class="title">填充自定义颜色</div>
+						<!-- 应用实例 -->
 						<el-row>
 							<el-col :span="6">
 								<ai-statistic v-model="value" icon :options="options2" fill label="收入总值">
@@ -60,12 +73,14 @@
 								</ai-statistic>
 							</el-col>
 						</el-row>
+						<!-- 代码参考 -->
 						<div class="example">
-							<markdown-run :mark="Example3"></markdown-run>
+							<markdown-run :mark="Example3" highlight-style-file-name="github"></markdown-run>
 						</div>
 					</div>
 					<div>
 						<div class="title">填充带类型样式</div>
+						<!-- 应用实例 -->
 						<el-row>
 							<el-col :span="6">
 								<ai-statistic v-model="value" theme='theme-mixiaoku' :options="options" fill icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
@@ -80,12 +95,14 @@
 								<ai-statistic v-model="value" :options="options" fill icon type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
 							</el-col>
 						</el-row>
+						<!-- 代码参考 -->
 						<div class="example">
-							<markdown-run :mark="Example4"></markdown-run>
+							<markdown-run :mark="Example4" highlight-style-file-name="github"></markdown-run>
 						</div>
 					</div>
 					<div>
 						<div class="title">非填充带类型样式</div>
+						<!-- 应用实例 -->
 						<el-row>
 							<el-col :span="6">
 								<ai-statistic v-model="value" theme='theme-mixiaoku' :options="options" icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
@@ -100,14 +117,11 @@
 								<ai-statistic v-model="value" :options="options" icon type="error" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
 							</el-col>
 						</el-row>
+						<!-- 代码参考 -->
 						<div class="example">
-							<markdown-run :mark="Example5"></markdown-run>
+							<markdown-run :mark="Example5" highlight-style-file-name="github"></markdown-run>
 						</div>
 					</div>
-				</div>
-				<!-- 代码参考 -->
-				<div class="example">
-					<markdown-run :mark="ExampleMD" highlight-style-file-name="github"></markdown-run>
 				</div>
 			</div>
 		</div>
@@ -142,7 +156,7 @@
 				useMD: UseMD,
 				value: 1000,
 				options: {
-                    unit: '元',
+					unit: '元',
 				},
 				options2: {
 					unit: '元',
