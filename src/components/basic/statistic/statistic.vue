@@ -242,7 +242,7 @@
 
 	/* 日食主题 */
 	.ai-statistic.theme-mixiaoku {
-		box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.4);
+		box-shadow: 1px 2px 12px 1px rgba(255, 255, 255, 0.4);
 		color: #fff;
 		background: rgba(0, 0, 0, 0.8);
 	}

@@ -5,6 +5,7 @@
 				<img src="../assets/images/logo-theme-chalk.svg" height="34" v-show="$store.getters.theme === 'theme-chalk'">
 				<img src="../assets/images/logo-theme-mixiaoku.svg" height="34" v-show="$store.getters.theme === 'theme-mixiaoku'">
 			</a>
+			<span class="ai-layout-header-content-line"></span>
 			<span class="title" title="斯蒂芬妮">Stefanie</span>
 
 			<a href="https://github.com/aigodata/stefanie" target="_blank" title="访问github" class="github-logo">
@@ -25,7 +26,7 @@
 					<el-option v-for="item in categoryList" :key="item.path" :label="item.meta.name" :value="item.path">
 					</el-option>
 				</el-select>
-                <div class="theme-nav-line"></div>
+				<div class="theme-nav-line"></div>
 			</div>
 		</div>
 	</div>
@@ -100,14 +101,18 @@
 
 	.ai-layout-header .ai-layout-header-content {
 	}
-
+	.ai-layout-header .ai-layout-header-content .ai-layout-header-content-line {
+		height: 26px;
+		border-right: 1px solid #717171;
+		opacity: 0.3;
+		display: inline-block;
+		margin-bottom: -5px;
+	}
 	/* logo */
-
 	.ai-layout-header .logo {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
-
 	.ai-layout-header .logo img {
 		position: relative;
 		top: 9px;
@@ -116,11 +121,11 @@
 	/* 名称 */
 
 	.ai-layout-header .title {
-		padding: 0 10px;
+		padding: 0 15px;
 		font-size: 20px;
 		font-weight: bold;
-        line-height: 60px;
-        color: #353535;
+		line-height: 60px;
+		color: #353535;
 	}
 
 	.ai-layout-header .sub-title {
@@ -158,19 +163,23 @@
 	.ai-layout-header .theme-nav .theme-nav-item.active {
 		color: #549ef8;
 	}
-    .ai-layout-header .theme-nav-select{
-        float: right;color: #353535;
-    }
-    .ai-layout-header .theme-nav-select .el-select{
-        width:120px;
-    }
-    .ai-layout-header .theme-nav-select .el-select input{
-        border:none;
-    }
-    .ai-layout-header .theme-nav-select .theme-nav-line{
-        height: 26px;float: right;border-right: 1px solid #717171;
-        margin: 17px 20px;opacity: 0.3;
-    }
+	.ai-layout-header .theme-nav-select {
+		float: right;
+		color: #353535;
+	}
+	.ai-layout-header .theme-nav-select .el-select {
+		width: 120px;
+	}
+	.ai-layout-header .theme-nav-select .el-select input {
+		border: none;
+	}
+	.ai-layout-header .theme-nav-select .theme-nav-line {
+		height: 26px;
+		float: right;
+		border-right: 1px solid #717171;
+		margin: 17px 20px;
+		opacity: 0.3;
+	}
 	/* github */
 	.ai-layout-header .github-logo {
 		position: absolute;

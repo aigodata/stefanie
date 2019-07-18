@@ -30,7 +30,6 @@
 							<ai-statistic v-model="value" :options="options" icon fill label="资产总值">
 								<i class="el-icon-s-tools"></i>
 							</ai-statistic>
-
 						</el-col>
 						<el-col :span="6">
 							<ai-statistic v-model="value" :options="options" theme='theme-mixiaoku' icon label="资产总值">
@@ -42,23 +41,20 @@
 					<div class="example">
 						<markdown-run :mark="Example1" highlight-style-file-name="github"></markdown-run>
 					</div>
-					<div>
-						<div class="title">填充自定义颜色/图片</div>
-						<!-- 应用实例 -->
-						<el-row>
-							<el-col :span="6">
-								<ai-statistic v-model="value" icon :options="options" label="资产总值">
-									<i class="el-icon-magic-stick"></i>
-								</ai-statistic>
-							</el-col>
-							<el-col :span="6">
-								<ai-statistic v-model="value" icon :options="options" label="资产总值">
-									<img src="../../../assets/images/aigo.jpg" />
-								</ai-statistic>
-							</el-col>
-						</el-row>
-
-					</div>
+					<div class="title">填充自定义颜色/图片</div>
+					<!-- 应用实例 -->
+					<el-row>
+						<el-col :span="6">
+							<ai-statistic v-model="value" icon :options="options" label="资产总值">
+								<i class="el-icon-magic-stick"></i>
+							</ai-statistic>
+						</el-col>
+						<el-col :span="6">
+							<ai-statistic v-model="value" icon :options="options" label="资产总值">
+								<img src="../../../assets/images/aigo.jpg" />
+							</ai-statistic>
+						</el-col>
+					</el-row>
 					<!-- 代码参考 -->
 					<div class="example">
 						<markdown-run :mark="Example2" highlight-style-file-name="github"></markdown-run>
