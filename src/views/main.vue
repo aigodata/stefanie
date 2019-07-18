@@ -79,7 +79,7 @@
         left: 200px;
         right: 0;
         overflow: auto;
-        padding: 0 0 50px 20px;
+        padding: 40px 0 50px 20px;
     }
 </style>
 
