@@ -68,7 +68,7 @@
 						<div class="title">填充带类型样式</div>
 						<el-row>
 							<el-col :span="6">
-								<ai-statistic v-model="value" :options="options" fill icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+								<ai-statistic v-model="value" theme='theme-mixiaoku' :options="options" fill icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
 							</el-col>
 							<el-col :span="6">
 								<ai-statistic v-model="value" :options="options" fill icon type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
@@ -88,7 +88,7 @@
 						<div class="title">非填充带类型样式</div>
 						<el-row>
 							<el-col :span="6">
-								<ai-statistic v-model="value" :options="options" icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
+								<ai-statistic v-model="value" theme='theme-mixiaoku' :options="options" icon type="warning" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
 							</el-col>
 							<el-col :span="6">
 								<ai-statistic v-model="value" :options="options" icon type="success" label="收入总值"><i class="el-icon-s-tools"></i></ai-statistic>
@@ -142,7 +142,7 @@
 				useMD: UseMD,
 				value: 1000,
 				options: {
-					unit: '元',
+                    unit: '元',
 				},
 				options2: {
 					unit: '元',

@@ -187,7 +187,7 @@
 	.ai-statistic.theme-chalk {
 		color: #333;
 		background: #fff;
-		border: 1px solid #ccc;
+		box-shadow: 1px 2px 12px 1px rgba(0,0,0,.4);
 	}
 	/* 非填充样式 */
 	.ai-statistic.theme-chalk .ai-statistic-icon .warning {
@@ -237,9 +237,56 @@
 	}
 
 	/* 日食主题 */
-	.ai-statistic .theme-mixiaoku {
-		border: 1px solid #fff;
+	.ai-statistic.theme-mixiaoku {
+        border: 1px solid #fff;
+        box-shadow: 1px 2px 12px 1px rgba(0,0,0,.4);
 		color: #fff;
-		background: #333;
+		background: rgba(0,0,0,.8);
+    }
+    /* 非填充样式 */
+	.ai-statistic.theme-mixiaoku .ai-statistic-icon .warning {
+		background: #fff;
+		color: #f1d45d;
+		border: 2px solid #f1d45d;
+	}
+	.ai-statistic.theme-mixiaoku .ai-statistic-icon .success {
+		background: #fff;
+		color: #b3d46c;
+		border: 2px solid #b3d46c;
+	}
+	.ai-statistic.theme-mixiaoku .ai-statistic-icon .primary {
+		background: #fff;
+		color: #55a2e2;
+		border: 2px solid #55a2e2;
+	}
+	.ai-statistic.theme-mixiaoku .ai-statistic-icon .error {
+		background: #fff;
+		color: #e3687e;
+		border: 2px solid #e3687e;
+	}
+    /* 填充样式 */
+	.ai-statistic.theme-mixiaoku .is-fill .ai-statistic-icon-border {
+        color: #fff;
+        background: #333;
+	}
+	.ai-statistic.theme-mixiaoku .is-fill .warning {
+		background: #f1d45d;
+		color: #fff;
+		border: 2px solid #f1d45d;
+	}
+	.ai-statistic.theme-mixiaoku .is-fill .success {
+		background: #b3d46c;
+		color: #fff;
+		border: 2px solid #b3d46c;
+	}
+	.ai-statistic.theme-mixiaoku .is-fill .primary {
+		background: #55a2e2;
+		color: #fff;
+		border: 2px solid #55a2e2;
+	}
+	.ai-statistic.theme-mixiaoku .is-fill .error {
+		background: #e3687e;
+		color: #fff;
+		border: 2px solid #e3687e;
 	}
 </style>
