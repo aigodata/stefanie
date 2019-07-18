@@ -134,11 +134,9 @@
 				value1: '',
 				options: {
 					unit: '元',
-					isSymbol: ',',
 				},
 				options2: {
 					unit: '元',
-					isSymbol: ',',
 					iconBorderSize: '6',
 					iconBorderColor: 'red',
 					iconBorderType: 'solid',

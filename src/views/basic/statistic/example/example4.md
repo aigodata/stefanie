@@ -29,7 +29,6 @@
                 value:1000,
                 options:{
 					unit: '元',
-					isSymbol: ',',
                 }
             }
         }
