@@ -6,7 +6,6 @@
 |label|描述|string/number|false|-|-|
 |icon|是否带图标|string|false|-|-|
 |fill|颜色是否填充|string|false|-|red/#cccccc|
-|horizonta|是否横向排列|string|false|-|-|
 
 #### Options ####
 
