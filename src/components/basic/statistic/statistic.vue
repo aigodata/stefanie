@@ -165,8 +165,7 @@
 	.ai-statistic.theme-chalk {
 		color: #333;
         background: #fff;
-        border:1px solid rgba(110, 127, 136, 0.1);
-        box-shadow: 1px 3px 13px 1px rgba(110, 127, 136, 0.1);
+        border:1px solid #ccc;
 	}
 	/* 非填充样式 */
 	.ai-statistic .ai-statistic-icon .warning {
