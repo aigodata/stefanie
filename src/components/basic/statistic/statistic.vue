@@ -1,29 +1,22 @@
 <template>
-	<!-- 统计数字|用于展示数字数据 -->
+	<!-- 统计数字 | 用于展示数字数据 -->
 	<div class="ai-statistic" :class="[theme,customConfig.customClass]">
-		<div class="ai-statistic-inner" :class="icon?'':'ai-statistic-inner-no-icon'">
+		<div class="ai-statistic-inner" :class="[theme,icon?'':'ai-statistic-inner-no-icon']">
 			<!-- icon展示 -->
-			<div v-if="fill&&icon" class="ai-statistic-icon is-fill">
-				<div class="ai-statistic-icon-border">
-					<div class="ai-statistic-inner-border" :class="`${type?type:''}`" :style="color?`background:${color};`:''" >
-						<slot></slot>
-					</div>
-				</div>
-			</div>
-			<div v-else-if="icon" class="ai-statistic-icon">
-				<div class="ai-statistic-icon-border">
-					<div class="ai-statistic-inner-border" :class="`${type?type:''}`" :style="color?`background:#fff;color:${color}`:''">
+			<div v-if="icon" class="ai-statistic-icon" :class="fill?'is-fill':''">
+				<div class="ai-statistic-icon-border" :style="iconBGColor">
+					<div class="ai-statistic-inner-border" :style="iconBorder" :class="`${type?type:''}`">
 						<slot></slot>
 					</div>
 				</div>
 			</div>
 			<!-- 文字提示 -->
 			<div class="ai-statistic-text" :class="icon?'':'ai-statistic-no-icon'">
-				<div class="ai-statistic-label">
+				<div class="ai-statistic-label" :style="titleStyle">
 					<span>{{ label }} {{ customConfig.unit ? `( ${ customConfig.unit } )` : ``}}</span>
 				</div>
-				<div class="ai-statistic-value">
-					{{ customConfig.isSymbol?fmoney(value,3):value }}
+				<div class="ai-statistic-value" :style="valueStyle">
+					{{ value }}
 				</div>
 			</div>
 		</div>
@@ -39,36 +32,65 @@
 				type: [String, Number],
 				default: "统计"
 			},
+            /**
+             * 默认参数的书写位置
+             * 可以配置样式变量
+             * 可以配置组件的默认配置
+             */
+			options: {
+				type: Object,
+				default: function () {
+					return {
+						unit: '',
+						isSymbol: false,
+						iconBorderSize: '',
+						iconBorderColor: '',
+						iconBorderType: '',
+						iconColor: '',
+						iconBGColor: '',
+						iconSize: '',
+						titleFontSize: '',
+						titleFontColor: '',
+						valueFontSize: '',
+						valueFontColor: ''
+					}
+				}
+			}
 		},
-		computed: {},
+		computed: {
+			// 重新组装、合并 props 数据 --> 不能删除!!!
+			customConfig: function () {
+				// 当前类 props.options 属性
+				let c = this.$options.__proto__.props.options.default();
+				// 父类 props.options 属性
+				let p = this.$options.extends.props.options.default();
+				// 自定义属性 与 当前类 props 、父类 props 合并
+				return Object.assign(p, c, this.options);
+			},
+		},
 		watch: {},
 		data () {
 			return {
 				fill: false,
-				color: '',
+				icon: false,
 				type: '',
-				icon: false
+				iconBorder: {},
+				iconBGColor: {},
+				titleStyle: {},
+				valueStyle: {},
 			};
 		},
 		methods: {
-			// 处理金额位数
-			fmoney (s, n) {
-				n = n > 0 && n <= 20 ? n : 2;
-				s = parseFloat((s + "").replace(/[^\d\.-]/g, "")) + "";
-				let l = s.split(".")[0].split("").reverse(),
-					r = s.split(".")[1] ? `.${s.split(".")}` : '', t = "";
-				for (let i = 0; i < l.length; i++) {
-					t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? this.customConfig.isSymbol : "");
-				}
-				return t.split("").reverse().join("") + r;
-			},
 			clear () { },
 			load () {
 				'fill' in this.$attrs ? this.fill = true : null;
-				'fill' in this.$attrs && this.$attrs.fill ? this.color = this.$attrs.fill : null;
-				'type' in this.$attrs && this.$attrs.type ? this.type = this.$attrs.type : null;
-				'color' in this.$attrs && this.$attrs.color ? this.color = this.$attrs.color : null;
 				'icon' in this.$attrs ? this.icon = true : null;
+				'type' in this.$attrs ? this.type = this.$attrs.type : null;
+				let s = this.customConfig;
+				this.iconBorder = `border: ${s.iconBorderSize}px ${s.iconBorderType} ${s.iconBorderColor};color:${s.iconColor};font-size:${s.iconSize}px;`;
+				'fill' in this.$attrs ? this.iconBGColor = `background:${s.iconBGColor}` : '';
+				this.titleStyle = `font-size:${s.titleFontSize}px;color:${s.titleFontColor};`;
+				this.valueStyle = `font-size:${s.valueFontSize}px;color:${s.valueFontColor};`;
 			}
 		},
 		mounted () {
@@ -98,18 +120,19 @@
 		padding: 50%;
 		text-align: center;
 		border-radius: 50%;
+		font-size: 30px;
 	}
 	.ai-statistic
 		.ai-statistic-icon
 		.ai-statistic-icon-border
 		.ai-statistic-inner-border {
 		position: absolute;
+		border: 2px solid #333;
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
 		left: 0;
 		top: 0;
-		border: 2px solid;
 	}
 	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border img,
 	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border i,
@@ -118,7 +141,6 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		font-size: 30px;
 	}
 	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border img,
 	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border svg {
@@ -164,54 +186,55 @@
 	/* 白垩纪主题 */
 	.ai-statistic.theme-chalk {
 		color: #333;
-        background: #fff;
-        border:1px solid #ccc;
+		background: #fff;
+		border: 1px solid #ccc;
 	}
 	/* 非填充样式 */
-	.ai-statistic .ai-statistic-icon .warning {
+	.ai-statistic.theme-chalk .ai-statistic-icon .warning {
 		background: #fff;
 		color: #f1d45d;
 		border: 2px solid #f1d45d;
 	}
-	.ai-statistic .ai-statistic-icon .success {
+	.ai-statistic.theme-chalk .ai-statistic-icon .success {
 		background: #fff;
 		color: #b3d46c;
 		border: 2px solid #b3d46c;
 	}
-	.ai-statistic .ai-statistic-icon .primary {
+	.ai-statistic.theme-chalk .ai-statistic-icon .primary {
 		background: #fff;
 		color: #55a2e2;
 		border: 2px solid #55a2e2;
 	}
-	.ai-statistic .ai-statistic-icon .error {
+	.ai-statistic.theme-chalk .ai-statistic-icon .error {
 		background: #fff;
 		color: #e3687e;
 		border: 2px solid #e3687e;
 	}
 	/* 填充样式 */
-	.ai-statistic .is-fill .ai-statistic-icon-border {
+	.ai-statistic.theme-chalk .is-fill .ai-statistic-icon-border {
 		color: #fff;
 	}
-	.ai-statistic .is-fill .warning {
+	.ai-statistic.theme-chalk .is-fill .warning {
 		background: #f1d45d;
 		color: #fff;
 		border: 2px solid #f1d45d;
 	}
-	.ai-statistic .is-fill .success {
+	.ai-statistic.theme-chalk .is-fill .success {
 		background: #b3d46c;
 		color: #fff;
 		border: 2px solid #b3d46c;
 	}
-	.ai-statistic .is-fill .primary {
+	.ai-statistic.theme-chalk .is-fill .primary {
 		background: #55a2e2;
 		color: #fff;
 		border: 2px solid #55a2e2;
 	}
-	.ai-statistic .is-fill .error {
+	.ai-statistic.theme-chalk .is-fill .error {
 		background: #e3687e;
 		color: #fff;
 		border: 2px solid #e3687e;
 	}
+
 	/* 日食主题 */
 	.ai-statistic .theme-mixiaoku {
 		border: 1px solid #fff;

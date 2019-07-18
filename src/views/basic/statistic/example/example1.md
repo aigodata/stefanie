@@ -13,7 +13,6 @@
             return{
                 options:{
                     value:1000,
-                    customClass: '',
 					unit: '元',
 					isSymbol: ',',
                 }

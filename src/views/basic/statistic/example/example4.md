@@ -28,7 +28,6 @@
             return{
                 value:1000,
                 options:{
-                    customClass: '',
 					unit: '元',
 					isSymbol: ',',
                 }

@@ -10,27 +10,28 @@
 			<div class="component-example-content">
 				<!-- 组件使用 -->
 				<div class="source">
+					</el-date-picker>
 					<div class="title">无Icon样式</div>
 					<el-row>
 						<el-col :span="6">
-							<ai-statistic v-model="value" :options="options" color="green" label="资产总值">
+							<ai-statistic v-model="value" :options="options" label="资产总值">
 								<i class="el-icon-s-tools"></i>
 							</ai-statistic>
 						</el-col>
 					</el-row>
 					<div class="example">
-						<markdown-run :mark="NoIcon"></markdown-run>
+						<markdown-run :mark="Example1"></markdown-run>
 					</div>
 					<div>
 						<div class="title">填充自定义颜色/图片</div>
 						<el-row>
 							<el-col :span="6">
-								<ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
+								<ai-statistic v-model="value" icon :options="options" label="资产总值">
 									<i class="el-icon-s-tools"></i>
 								</ai-statistic>
 							</el-col>
 							<el-col :span="6">
-								<ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
+								<ai-statistic v-model="value" icon :options="options" label="资产总值">
 									<img src="../../../assets/images/aigo.jpg" />
 								</ai-statistic>
 							</el-col>
@@ -38,19 +39,19 @@
 
 					</div>
 					<div class="example">
-						<markdown-run :mark="CustomColor"></markdown-run>
+						<markdown-run :mark="Example2"></markdown-run>
 					</div>
 					<div>
 						<div class="title">填充自定义颜色</div>
 						<el-row>
 							<el-col :span="6">
-								<ai-statistic v-model="value" icon :options="options" fill="green" label="收入总值">
+								<ai-statistic v-model="value" icon :options="options2" fill label="收入总值">
 									<i class="el-icon-s-tools"></i>
 								</ai-statistic>
 							</el-col>
 						</el-row>
 						<div class="example">
-							<markdown-run :mark="FillCustomColor"></markdown-run>
+							<markdown-run :mark="Example3"></markdown-run>
 						</div>
 					</div>
 					<div>
@@ -70,7 +71,7 @@
 							</el-col>
 						</el-row>
 						<div class="example">
-							<markdown-run :mark="FillType"></markdown-run>
+							<markdown-run :mark="Example4"></markdown-run>
 						</div>
 					</div>
 					<div>
@@ -90,48 +91,65 @@
 							</el-col>
 						</el-row>
 						<div class="example">
-							<markdown-run :mark="NoFillType"></markdown-run>
+							<markdown-run :mark="Example5"></markdown-run>
 						</div>
 					</div>
 				</div>
 				<!-- 代码参考 -->
 				<div class="example">
-					<markdown-run :mark="exampleMD" highlight-style-file-name="github"></markdown-run>
+					<markdown-run :mark="ExampleMD" highlight-style-file-name="github"></markdown-run>
 				</div>
 			</div>
 		</div>
 		<!-- 组件参数说明 -->
 		<div class="component-use">
 			<markdown-run :mark="useMD"></markdown-run>
+			<markdown-run :mark="BasicUse"></markdown-run>
 		</div>
 	</div>
 </template>
 <script>
 	import ExampleMD from "!text-loader!./example/example.md";
-	import NoIcon from "!text-loader!./example/noIcon.md";
-	import CustomColor from "!text-loader!./example/customColor.md";
-	import FillCustomColor from "!text-loader!./example/fillCustomColor.md";
-	import FillType from "!text-loader!./example/fillType.md";
-	import NoFillType from "!text-loader!./example/noFillType.md";
+	import Example1 from "!text-loader!./example/example1.md";
+	import Example2 from "!text-loader!./example/example2.md";
+	import Example3 from "!text-loader!./example/example3.md";
+	import Example4 from "!text-loader!./example/example4.md";
+	import Example5 from "!text-loader!./example/example5.md";
+	import BasicUse from "!text-loader!../basic-use.md";
 	import UseMD from "!text-loader!./use.md";
 
 	export default {
 		props: {},
 		data () {
 			return {
-				exampleMD: ExampleMD,
-				NoIcon: NoIcon,
-				CustomColor: CustomColor,
-				FillCustomColor: FillCustomColor,
-				FillType: FillType,
-				NoFillType: NoFillType,
+				ExampleMD: ExampleMD,
+				Example1: Example1,
+				Example2: Example2,
+				Example3: Example3,
+				Example4: Example4,
+				Example5: Example5,
+				BasicUse: BasicUse,
 				useMD: UseMD,
 				value: 1000,
+				value1: '',
 				options: {
-					customClass: '',
 					unit: '元',
 					isSymbol: ',',
 				},
+				options2: {
+					unit: '元',
+					isSymbol: ',',
+					iconBorderSize: '6',
+					iconBorderColor: 'red',
+					iconBorderType: 'solid',
+					iconColor: 'red',
+					iconBGColor: 'green',
+					iconSize: '40',
+					titleFontSize: '18',
+					titleFontColor: '#000',
+					valueFontSize: '40',
+					valueFontColor: 'lime'
+				}
 			};
 		},
 		computed: {},
