@@ -1,12 +1,12 @@
 ````html
 <el-row>
     <el-col :span="6">
-        <ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
-            <i class="el-icon-s-tools"></i>
+        <ai-statistic v-model="value" icon :options="options" label="资产总值">
+            <i class="el-icon-magic-stick"></i>
         </ai-statistic>
     </el-col>
     <el-col :span="6">
-        <ai-statistic v-model="value" icon :options="options" color="green" label="资产总值">
+        <ai-statistic v-model="value" icon :options="options" label="资产总值">
             <img src="../../../assets/images/aigo.jpg" />
         </ai-statistic>
     </el-col>

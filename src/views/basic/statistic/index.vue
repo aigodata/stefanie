@@ -10,11 +10,21 @@
 			<div class="component-example-content">
 				<!-- 组件使用 -->
 				<div class="source">
-					</el-date-picker>
 					<div class="title">无Icon样式</div>
 					<el-row>
 						<el-col :span="6">
 							<ai-statistic v-model="value" :options="options" label="资产总值">
+								<i class="el-icon-s-tools"></i>
+							</ai-statistic>
+						</el-col>
+					</el-row>
+					<div class="example">
+						<markdown-run :mark="ExampleMD"></markdown-run>
+					</div>
+					<div class="title">填充默认颜色样式</div>
+					<el-row>
+						<el-col :span="6">
+							<ai-statistic v-model="value"  :options="options" icon fill label="资产总值">
 								<i class="el-icon-s-tools"></i>
 							</ai-statistic>
 						</el-col>
@@ -27,7 +37,7 @@
 						<el-row>
 							<el-col :span="6">
 								<ai-statistic v-model="value" icon :options="options" label="资产总值">
-									<i class="el-icon-s-tools"></i>
+									<i class="el-icon-magic-stick"></i>
 								</ai-statistic>
 							</el-col>
 							<el-col :span="6">
@@ -131,7 +141,6 @@
 				BasicUse: BasicUse,
 				useMD: UseMD,
 				value: 1000,
-				value1: '',
 				options: {
 					unit: '元',
 				},

@@ -210,9 +210,10 @@
 		color: #e3687e;
 		border: 2px solid #e3687e;
 	}
-	/* 填充样式 */
+    /* 填充样式 */
 	.ai-statistic.theme-chalk .is-fill .ai-statistic-icon-border {
-		color: #fff;
+        color: #fff;
+        background: #333;
 	}
 	.ai-statistic.theme-chalk .is-fill .warning {
 		background: #f1d45d;
