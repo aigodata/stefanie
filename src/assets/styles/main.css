@@ -127,12 +127,11 @@ body {
 }
 
 .ai-layout-sidebar .ai-layout-sidebar-content .ai-layout-sidebar-title {
-    margin-top: 15px;
+    margin: 5px auto 15px auto;
     font-size: 16px;
     color: #333;
     line-height: 40px;
     height: 40px;
-    margin: 0;
     padding: 0;
     text-decoration: none;
     display: block;
@@ -157,18 +156,16 @@ body {
 }
 
 .ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-item .ai-nav-name:hover {
-    color: #409eff;
+    color: #2DA3F1;
 }
 
 .ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-group .ai-nav-item .ai-nav-name {
     padding-left: 20px;
     font-size: 14px;
-    height: 26px;
-    line-height: 26px;
 }
 
 .ai-layout-sidebar .ai-layout-sidebar-content .ai-nav-group .active {
-    color: #409eff;
+    color: #2DA3F1;
 }
 
 .ai-layout-container .ai-layout-content .component-container {
