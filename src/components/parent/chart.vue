@@ -3,7 +3,7 @@
         <!-- 图表的加载位置 -->
         <div class="ai-chart-content" ref="ai-chart-content" v-show="state === 'running'"></div>
         <!-- 状态机显示 | 初始 | 加载错误 | 空数据 -->
-        <div class="ai-chart-placeholder" v-show="state !== 'runnong'">
+        <div class="ai-chart-placeholder" v-show="state !== 'running'">
             <!-- 预留空图标占位 -->
             <div class="ai-chart-placeholder-picture">
                 <slot></slot>
