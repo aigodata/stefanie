@@ -1,8 +1,4 @@
-## stefanie(斯蒂芬妮) components组件库
-
-    roamer初中的梦中情人
-    XiaoBelly的小学的梦中情人都是孙燕姿 
-    那么就用孙燕姿的英文名纪念我们的情窦初开的初中吧
+## stefanie(斯蒂芬妮) Component组件库
 
 ### 项目介绍
 
