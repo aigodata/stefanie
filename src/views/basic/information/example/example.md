@@ -1,10 +1,10 @@
 ````html
 <el-row>
-    	<el-row>
-            <el-col :span="6">
-                <ai-information :options="options"></ai-information>
-            </el-col>
-        </el-row>
+    <el-row>
+        <el-col :span="6">
+            <ai-information :options="options"></ai-information>
+        </el-col>
+    </el-row>
 </el-row>
 
 <script>
