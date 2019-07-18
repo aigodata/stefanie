@@ -3,12 +3,12 @@
         <!-- 图表的加载位置 -->
         <div class="ai-chart-content" ref="ai-chart-content" v-show="state === 'running'"></div>
         <!-- 状态机显示 | 初始 | 加载错误 | 空数据 -->
-        <div class="ai-charts-placeholder" v-show="state !== 'runnong'">
+        <div class="ai-chart-placeholder" v-show="state !== 'runnong'">
             <!-- 预留空图标占位 -->
-            <div class="ai-charts-placeholder-picture">
+            <div class="ai-chart-placeholder-picture">
                 <slot></slot>
             </div>
-            <span class="ai-charts-placeholder-text">{{ stateMachine[state] }}</span>
+            <span class="ai-chart-placeholder-text">{{ stateMachine[state] }}</span>
         </div>
     </div>
 </template>
@@ -105,21 +105,21 @@
         height: 100%;
     }
 
-    .ai-chart .ai-charts-placeholder {
+    .ai-chart .ai-chart-placeholder {
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .ai-chart.theme-chalk .ai-charts-placeholder .ai-charts-placeholder-picture {
+    .ai-chart.theme-chalk .ai-chart-placeholder .ai-chart-placeholder-picture {
 
     }
 
     /* 白垩纪 主题 样式 */
     .ai-chart.theme-chalk {
     }
-    .ai-chart.theme-chalk .ai-charts-placeholder .ai-charts-placeholder-text {
+    .ai-chart.theme-chalk .ai-chart-placeholder .ai-chart-placeholder-text {
         color: #909399;
         font-size: 12px;
     }
