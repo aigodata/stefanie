@@ -15,6 +15,8 @@
 |labelFontSize|内容文字大小|string/number|false|-|-|
 |labelFontColor|内容文字颜色|string|false|-|-|
 |labelFontAlign|内容文字对齐方式|string|false|-|left/right/center/justify...|
+
+
 #### Options Data ####
 
 |参数|说明|类型|是否必传|默认值|可选值|
