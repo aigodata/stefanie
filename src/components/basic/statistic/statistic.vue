@@ -1,17 +1,17 @@
 <template>
 	<!-- 统计数字 | 用于展示数字数据 -->
 	<div class="ai-statistic" :class="[theme,customConfig.customClass]">
-		<div class="ai-statistic-inner" :class="[theme,icon?'':'ai-statistic-inner-no-icon']">
+		<div class="ai-statistic-inner" :class="[theme,{'ai-statistic-inner-no-icon':!icon}]">
 			<!-- icon展示 -->
-			<div v-if="icon" class="ai-statistic-icon" :class="fill?'is-fill':''">
+			<div v-if="icon" class="ai-statistic-icon" :class="{'is-fill':fill}">
 				<div class="ai-statistic-icon-border" :style="iconBGColor">
-					<div class="ai-statistic-inner-border" :style="iconBorder" :class="`${type?type:''}`">
+					<div class="ai-statistic-inner-border" :class="type" :style="iconBorder">
 						<slot></slot>
 					</div>
 				</div>
 			</div>
 			<!-- 文字提示 -->
-			<div class="ai-statistic-text" :class="icon?'':'ai-statistic-no-icon'">
+			<div class="ai-statistic-text" :class="{'ai-statistic-no-icon':!icon}">
 				<div class="ai-statistic-label" :style="titleStyle">
 					<span>{{ label }} {{ customConfig.unit ? `( ${ customConfig.unit } )` : ``}}</span>
 				</div>
@@ -88,7 +88,7 @@
 				'type' in this.$attrs ? this.type = this.$attrs.type : null;
 				let s = this.customConfig;
 				this.iconBorder = `border: ${s.iconBorderSize}px ${s.iconBorderType} ${s.iconBorderColor};color:${s.iconColor};font-size:${s.iconSize}px;`;
-				'fill' in this.$attrs ? this.iconBGColor = `background:${s.iconBGColor}` : '';
+				'fill' in this.$attrs ? this.iconBGColor = `background:${s.iconBGColor}` : null;
 				this.titleStyle = `font-size:${s.titleFontSize}px;color:${s.titleFontColor};`;
 				this.valueStyle = `font-size:${s.valueFontSize}px;color:${s.valueFontColor};`;
 			}
@@ -193,11 +193,11 @@
 	.ai-statistic.theme-chalk .is-fill .ai-statistic-icon-border {
 		color: #fff;
 		background: #333;
-    }
-    .ai-statistic .ai-statistic-icon .ai-statistic-icon-border{
-        background: #fff;
-        color: #333;
-    }
+	}
+	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border {
+		background: #fff;
+		color: #333;
+	}
 	/* 非填充样式 */
 	.ai-statistic.theme-chalk .ai-statistic-icon .warning {
 		background: #fff;
@@ -250,11 +250,11 @@
 	.ai-statistic.theme-mixiaoku .is-fill .ai-statistic-icon-border {
 		color: #fff;
 		background: #fff;
-    }
-    .ai-statistic .ai-statistic-icon .ai-statistic-icon-border{
-        background: #fff;
-        color: #333;
-    }
+	}
+	.ai-statistic .ai-statistic-icon .ai-statistic-icon-border {
+		background: #fff;
+		color: #333;
+	}
 	/* 非填充样式 */
 	.ai-statistic.theme-mixiaoku .ai-statistic-icon .warning {
 		background: #fff;
