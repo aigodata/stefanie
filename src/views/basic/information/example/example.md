@@ -14,8 +14,8 @@
                 options: {
 					title: 'XX合同信息展示',
 					data: [
-						{ title: '合同金额', value: 8000, },
-						{ title: '合同余额', value: 100, },
+						{ title: '合同金额', value: 8000, unit:'元' },
+						{ title: '合同余额', value: 100,unit:'元' },
 					]
 				},
             }
