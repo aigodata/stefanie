@@ -2,9 +2,14 @@
 	<!-- 信息展示 | 用于展示多条信息数据 -->
 	<div class="ai-information" :class="[theme,customConfig.customClass]">
 		<div class="ai-information-inner">
-			<div class="ai-information-title">{{ customConfig.title }}</div>
+			<!-- 标题展示 -->
+			<div class="ai-information-title" :style="titleStyle">
+                {{ customConfig.title }}
+				<span></span>
+			</div>
+			<!-- 内容展示 -->
 			<div v-if="customConfig.data && customConfig.data.length">
-				<div v-for="(item,index) in customConfig.data" :key="index" class="ai-information-data">
+				<div v-for="(item,index) in customConfig.data" :style="labelStyle" :key="index" class="ai-information-data">
 					{{ item.label }}:{{ item.value }} {{item.unit ? `( ${item.unit} )` : ''}}
 				</div>
 			</div>
@@ -52,12 +57,18 @@
 			return {
 				customConfigData: {
 					status: '暂无数据'
-				}
+				},
+				titleStyle: {},
+				labelStyle: {}
 			};
 		},
 		methods: {
 			clear () { },
-			load () { }
+			load () {
+				let s = this.customConfig;
+				this.titleStyle = `font-size:${s.titleFontSize}px;color:${s.titleFontColor};text-align:${s.titleFontAlign};`;
+				this.labelStyle = `font-size:${s.labelFontSize}px;color:${s.labelFontColor};text-align:${s.labelFontAlign};`;
+			}
 		},
 		mounted () {
 			this.load();
@@ -68,12 +79,16 @@
 <style>
 	.ai-information {
 		padding: 10px;
-        margin: 10px;
+		margin: 10px;
 	}
 	.ai-information .ai-information-inner .ai-information-title {
 		font-size: 16px;
 		font-weight: 500;
+		text-overflow: ellipsis;
+		word-break: break-all;
+		word-spacing: normal;
 		line-height: 43px;
+		width: 100%;
 	}
 	.ai-information .ai-information-inner .ai-information-data {
 		line-height: 30px;
@@ -96,7 +111,7 @@
 	/* 日食主题 */
 	.ai-information.theme-mixiaoku {
 		box-shadow: 1px 2px 12px 1px rgba(255, 255, 255, 0.4);
-        background: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.4);
 	}
 	.ai-information.theme-mixiaoku .ai-information-inner {
 		color: #fff;

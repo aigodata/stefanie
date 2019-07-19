@@ -48,11 +48,17 @@
 				useMD: UseMD,
 				BasicUse: BasicUse,
 				options: {
-					title: 'XX合同信息展示',
+                    title: 'XX合同信息展示',
+                    titleFontSize:'18',
+                    titleFontColor:'red',
+                    titleFontAlign:'justify',
 					data: [
 						{ label: '合同金额', value: 8000, unit: '元' },
 						{ label: '合同余额', value: 100, unit: '元' },
-					]
+                    ],
+                    labelFontSize:'',
+                    labelFontColor:'',
+                    labelFontAlign:'',
 				},
 				options2: {
 					title: '奖学金',
