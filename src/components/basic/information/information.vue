@@ -68,6 +68,7 @@
 <style>
 	.ai-information {
 		padding: 10px;
+        margin: 10px;
 	}
 	.ai-information .ai-information-inner .ai-information-title {
 		font-size: 16px;

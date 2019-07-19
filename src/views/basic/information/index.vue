@@ -14,16 +14,17 @@
 						<el-col :span="6">
 							<ai-information :options="options"></ai-information>
 						</el-col>
+                        <el-col :span="6">
+							<ai-information :options="options2" ></ai-information>
+						</el-col>
+						<el-col :span="6">
+							<ai-information :options="options2" theme="theme-mixiaoku"></ai-information>
+						</el-col>
 					</el-row>
 					<!-- 代码参考 -->
 					<div class="example">
 						<markdown-run :mark="ExampleMD" highlight-style-file-name="github"></markdown-run>
 					</div>
-					<el-row>
-						<el-col :span="6">
-							<ai-information :options="options2" theme="theme-mixiaoku"></ai-information>
-						</el-col>
-					</el-row>
 				</div>
 			</div>
 		</div>
