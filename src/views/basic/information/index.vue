@@ -20,6 +20,9 @@
 						<el-col :span="6">
 							<ai-information :options="options2" theme="theme-mixiaoku"></ai-information>
 						</el-col>
+                        <el-col :span="6">
+							<ai-information :options="options" theme="theme-mixiaoku"></ai-information>
+						</el-col>
 					</el-row>
 					<!-- 代码参考 -->
 					<div class="example">
