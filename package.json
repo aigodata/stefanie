@@ -26,8 +26,8 @@
         "vue-router": "^3.0.7"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.9.0",
-        "@vue/cli-service": "^3.9.0",
+        "@vue/cli-plugin-babel": "^5.0.8",
+        "@vue/cli-service": "^5.0.8",
         "babel-plugin-transform-runtime": "^6.23.0",
         "babel-plugin-transform-vue-jsx": "^3.7.0",
         "front-matter-loader": "^0.2.0",
